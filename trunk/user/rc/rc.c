@@ -1183,6 +1183,21 @@ handle_notifications(void)
 			restart_sshd();
 		}
 #endif
+
+#if defined(APP_WIFIDOG)
+		else if (strcmp(entry->d_name, RCN_RESTART_WIFIDOG) == 0)
+		{
+			restart_wifidog();
+		}
+#endif
+
+#if defined(APP_NGROK)
+		else if (strcmp(entry->d_name, RCN_RESTART_NGROK) == 0)
+		{
+			restart_ngrok();
+		}
+#endif
+
 #if defined(APP_SMBD) || defined(APP_NMBD)
 		else if (strcmp(entry->d_name, RCN_RESTART_NMBD) == 0)
 		{

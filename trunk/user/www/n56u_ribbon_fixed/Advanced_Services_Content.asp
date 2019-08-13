@@ -24,7 +24,7 @@
 var $j = jQuery.noConflict();
 
 $j(document).ready(function() {
-	init_itoggle('telnetd');
+	//init_itoggle('telnetd');
 	init_itoggle('wins_enable', change_wins_enabled);
 	init_itoggle('lltd_enable');
 	init_itoggle('adsc_enable');
@@ -390,7 +390,7 @@ function change_crond_enabled(){
                                         <tr>
                                             <th colspan="2" style="background-color: #E3E3E3;"><#Adm_System_term#></th>
                                         </tr>
-                                        <tr>
+                                        <!--<tr>
                                             <th width="50%"><#Adm_System_telnetd#></th>
                                             <td>
                                                 <div class="main_itoggle">
@@ -403,7 +403,7 @@ function change_crond_enabled(){
                                                     <input type="radio" name="telnetd" id="telnetd_0" class="input" value="0" <% nvram_match_x("", "telnetd", "0", "checked"); %>/><#checkbox_No#>
                                                 </div>
                                             </td>
-                                        </tr>
+                                        </tr>-->
                                         <tr id="row_sshd">
                                             <th><#Adm_System_sshd#></th>
                                             <td>

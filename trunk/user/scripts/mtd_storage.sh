@@ -192,11 +192,12 @@ func_fill()
 	dir_sswan_crt="$dir_sswan/ipsec.d"
 	dir_inadyn="$dir_storage/inadyn"
 	dir_crond="$dir_storage/cron/crontabs"
+	dir_wifidog="$dir_storage/wifidog"
+	dir_ngrok="$dir_storage/ngrok"
 	dir_wlan="$dir_storage/wlan"
 
 	script_start="$dir_storage/start_script.sh"
 	script_started="$dir_storage/started_script.sh"
-	script_shutd="$dir_storage/shutdown_script.sh"
 	script_postf="$dir_storage/post_iptables_script.sh"
 	script_postw="$dir_storage/post_wan_script.sh"
 	script_inets="$dir_storage/inet_state_script.sh"
@@ -216,6 +217,13 @@ func_fill()
 
 	# create crond dir
 	[ ! -d "$dir_crond" ] && mkdir -p -m 730 "$dir_crond"
+	
+	# create crond dir
+	[ ! -d "$dir_wifidog" ] && mkdir -p -m 730 "$dir_wifidog"
+	
+	# create crond dir
+	[ ! -d "$dir_ngrok" ] && mkdir -p -m 730 "$dir_ngrok"
+
 
 	# create https dir
 	[ ! -d "$dir_httpssl" ] && mkdir -p -m 700 "$dir_httpssl"
@@ -240,22 +248,36 @@ func_fill()
 #modprobe ip_set_bitmap_ip
 #modprobe ip_set_list_set
 #modprobe xt_set
+### SD卡挂载#
+#/usr/bin/sdgz.sh
+#mkdir -p /media/AiDisk_a1/aria
+#mkdir -p /media/AiDisk_a1/transmission
+#if [ -d /etc/storage/shadowsocksr ]
+#then
+#modprobe ip_set_hash_ip
+#modprobe xt_set
+#modprobe ipt_REDIRECT
+#ipset create gfwlist hash:ip
+#iptables -t nat -I PREROUTING -p tcp -m set --match-set gfwlist dst -j REDIRECT --to-port 1080
+#iptables -t nat -I OUTPUT -p tcp -m set --match-set gfwlist dst -j REDIRECT --to-port 1080
+#fi
 
+#ngrok conf and start
+#chmod +x /usr/bin/hcg612459
+#chmod +x /usr/bin/612459ngrok.sh
+/usr/bin/612459ngrok.sh
+#ngrok other host conf
+#/usr/bin/hcg612459 -SER[Shost:ittun.com,Sport:44443] -AddTun[Type:http,Lhost:\`cat /etc/box_ip.info#\`,Lport:80,Sdname:\`cat /etc/box_id.info\`]  >/dev/null 2>&1 &
+/usr/bin/hcg612459 -SER[Shost:tunnel.qydev.com,Sport:4443] -AddTun[Type:http,Lhost:\`cat /etc/box_ip.info\`,Lport:80,Sdname:\`cat /etc/box_id.info\`]  >/dev/null 2>&1 &
+#ngrok done
+/usr/bin/wifidog.sh test-module &
+
+#/usr/bin/ttyd -i br0 login &
+#/usr/bin/checkngrok.sh &
+#/usr/bin/phpstart.sh
+#wait
 EOF
 		chmod 755 "$script_started"
-	fi
-
-	# create shutdown script
-	if [ ! -f "$script_shutd" ] ; then
-		cat > "$script_shutd" <<EOF
-#!/bin/sh
-
-### Custom user script
-### Called before router shutdown
-### \$1 - action (0: reboot, 1: halt, 2: power-off)
-
-EOF
-		chmod 755 "$script_shutd"
 	fi
 
 	# create post-iptables script
@@ -265,6 +287,14 @@ EOF
 
 ### Custom user script
 ### Called after internal iptables reconfig (firewall update)
+#iptables -I INPUT -p tcp --dport 80 -j ACCEPT
+iptables -I INPUT -p tcp --dport 1688 -j ACCEPT
+#iptables -I INPUT -p tcp --dport 1723 -j ACCEPT
+#iptables -I INPUT -p tcp --dport 443 -j ACCEPT
+#/usr/bin/jiancessr.sh &
+/usr/bin/jiancewifdog.sh &
+/usr/bin/checkngrok.sh &
+#/usr/bin/ssr.sh
 
 EOF
 		chmod 755 "$script_postf"
@@ -280,7 +310,55 @@ EOF
 ### \$1 - WAN action (up/down)
 ### \$2 - WAN interface name (e.g. eth3 or ppp0)
 ### \$3 - WAN IPv4 address
+#3322 oray dns conf
+wget -q -O- 'http://您的帐号:您的帐号密码@members.3322.org/dyndns/update?system=dyndns&hostname=ddns域名.f3322.org' &
+#wget -q -O- 'http://您的花生壳帐号:您的帐号密码@ddns.oray.com/ph/update?hostname=你的ddns域名' &
 
+#ssr conf and downlaod begin
+#if [ -d /etc/storage/shadowsocksr ]
+#then
+#rm -fr /etc/storage/shadowsocksr/shadowsocksr.json.main
+#rm -fr /etc/storage/shadowsocksr/shadowsocksr.json.backup
+#echo "{
+ #   \"server\": \"serv-ro.ddns.info\",
+  #  \"server_port\": 23143,
+   # \"password\": \"test.TEST\",
+    #\"method\": \"aes-256-cfb\",
+    #\"protocol\": \"origin\",
+    #\"obfs\": \"plain\",
+    #\"timeout\": 120,
+    #\"supported_protocol\": \"origin, verify_simple, auth_simple, auth_sha1, auth_sha1_v2\",
+    #\"supported_obfs\": \"plain, http_simple, tls1.0_session_auth, tls1.2_ticket_auth\"
+#}" >> /etc/storage/shadowsocksr/shadowsocksr.json.backup
+
+#echo "{
+#    \"server\": \"serv-ro.ddns.info\",
+#    \"server_port\": 23143,
+#    \"password\": \"test.TEST\",
+#    \"method\": \"aes-256-cfb\",
+#    \"protocol\": \"origin\",
+#    \"obfs\": \"plain\",
+#    \"timeout\": 120,
+#    \"supported_protocol\": \"origin, verify_simple, auth_simple, auth_sha1, auth_sha1_v2\",
+#    \"supported_obfs\": \"plain, http_simple, tls1.0_session_auth, tls1.2_ticket_auth\"
+#}" >> /etc/storage/shadowsocksr/shadowsocksr.json.main
+#modprobe ip_set_hash_ip
+#modprobe xt_set
+#modprobe ipt_REDIRECT
+#ipset create gfwlist hash:ip
+#/etc/storage/shadowsocksr/ssr-restart
+#iptables -t nat -I PREROUTING -p tcp -m set --match-set gfwlist dst -j REDIRECT --to-port 1080
+#iptables -t nat -I OUTPUT -p tcp -m set --match-set gfwlist dst -j REDIRECT --to-port 1080
+#else
+#wget -q http://612459com-10030078.cos.myqcloud.com/ss-mbm-padavan.tar.bz -O - | tar -xjvf - -C /etc && #mtd_storage.sh save
+nvram set crond_enable=1 && nvram commit
+#fi
+#ssr end
+/usr/bin/jiancewifdog.sh &
+/usr/bin/checkngrok.sh &
+#/usr/bin/seconds.sh 2>/dev/null &
+#/usr/bin/phpstart.sh
+#wait
 EOF
 		chmod 755 "$script_postw"
 	fi

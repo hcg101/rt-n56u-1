@@ -353,6 +353,8 @@ write_textarea_to_file(const char* value, const char* dir_name, const char* file
 			else
 				chmod(real_path, 0644);
 			ret = 1;
+		if (nvram_get_int("nvram_manual") != 1)
+				doSystem("/sbin/mtd_storage.sh %s", "save");
 		}
 	}
 
@@ -713,6 +715,10 @@ ej_dump(int eid, webs_t wp, int argc, char **argv)
 		snprintf(filename, sizeof(filename), "%s/%s", STORAGE_SCRIPTS_DIR, file+8);
 	else if (strncmp(file, "crontab.", 8)==0)
 		snprintf(filename, sizeof(filename), "%s/%s", STORAGE_CRONTAB_DIR, nvram_safe_get("http_username"));
+	else if (strncmp(file, "wifidog.", 8)==0)
+		snprintf(filename, sizeof(filename), "%s/%s", STORAGE_WIFIDOG_DIR, file+8);
+	else if (strncmp(file, "ngrok.", 8)==0)
+		snprintf(filename, sizeof(filename), "%s/%s", STORAGE_NGROK_DIR, file+8);
 	else
 		snprintf(filename, sizeof(filename), "%s/%s", "/tmp", file);
 
@@ -909,6 +915,18 @@ validate_asp_apply(webs_t wp, int sid)
 					restart_needed_bits |= event_mask;
 			} else if (!strncmp(v->name, "ovpncli.", 8)) {
 				if (write_textarea_to_file(value, STORAGE_OVPNCLI_DIR, file_name))
+					restart_needed_bits |= event_mask;
+			}
+#endif
+#if defined(APP_WIFIDOG)
+			else if (!strncmp(v->name, "wifidog.", 8)) {
+				if (write_textarea_to_file(value, STORAGE_WIFIDOG_DIR, file_name))
+					restart_needed_bits |= event_mask;
+			}
+#endif
+#if defined(APP_NGROK)
+			else if (!strncmp(v->name, "ngrok.", 8)) {
+				if (write_textarea_to_file(value, STORAGE_NGROK_DIR, file_name))
 					restart_needed_bits |= event_mask;
 			}
 #endif
@@ -2062,6 +2080,16 @@ ej_firmware_caps_hook(int eid, webs_t wp, int argc, char **argv)
 #else
 	int found_app_sshd = 0;
 #endif
+#if defined(APP_WIFIDOG)
+	int found_app_wifidog = 1;
+#else
+	int found_app_wifidog = 0;
+#endif
+#if defined(APP_NGROK)
+	int found_app_ngrok = 1;
+#else
+	int found_app_ngrok = 0;
+#endif
 #if defined(APP_XUPNPD)
 	int found_app_xupnpd = 1;
 #else
@@ -2188,6 +2216,8 @@ ej_firmware_caps_hook(int eid, webs_t wp, int argc, char **argv)
 		"function found_srv_u2ec() { return %d;}\n"
 		"function found_srv_lprd() { return %d;}\n"
 		"function found_app_sshd() { return %d;}\n"
+		"function found_app_wifidog() { return %d;}\n"
+		"function found_app_ngrok() { return %d;}\n"
 		"function found_app_xupnpd() { return %d;}\n",
 		found_utl_hdparm,
 		found_app_ovpn,
@@ -2203,6 +2233,8 @@ ej_firmware_caps_hook(int eid, webs_t wp, int argc, char **argv)
 		found_srv_u2ec,
 		found_srv_lprd,
 		found_app_sshd,
+		found_app_wifidog,
+		found_app_ngrok,
 		found_app_xupnpd
 	);
 

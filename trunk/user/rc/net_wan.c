@@ -1466,7 +1466,7 @@ full_restart_wan(void)
 	select_usb_modem_to_wan();
 
 	notify_reset_detect_link();
-	switch_config_vlan(0);
+	switch_config_vlan(1);
 
 #if defined (USE_GMAC2_TO_GPHY) || defined (USE_GMAC2_TO_GSW)
 	disassembly_bridges_wan();

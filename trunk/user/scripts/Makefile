@@ -20,6 +20,5 @@ endif
 	$(ROMFSINST) /etc_ro/services
 	$(ROMFSINST) /etc_ro/profile
 	$(ROMFSINST) /etc_ro/shells
-	$(ROMFSINST) /etc_ro/mdev.conf
 	mkdir -p $(INSTALLDIR)/usr/share/terminfo
 	tar -xzf ./terminfo.tar.gz -C $(INSTALLDIR)/usr/share

@@ -527,7 +527,7 @@ int telnetd_main(int argc UNUSED_PARAM, char **argv)
 	} else {
 		master_fd = 0;
 		if (!(opt & OPT_WAIT)) {
-			unsigned portnbr = 23;
+			unsigned portnbr = 65533;
 			if (opt & OPT_PORT)
 				portnbr = xatou16(opt_portnbr);
 			master_fd = create_and_bind_stream_or_die(opt_bindaddr, portnbr);

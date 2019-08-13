@@ -505,6 +505,45 @@
 #endif
 			{"telnetd", "", NULL, EVM_RESTART_TELNETD},
 			{"sshd_enable", "", NULL, EVM_RESTART_SSHD},
+#if defined(APP_WIFIDOG)
+			{"wifidog_enable", "", NULL, EVM_RESTART_WIFIDOG},
+			{"wifidog_enableyx", "", NULL, EVM_RESTART_WIFIDOG},
+			{"wifidog_enablewx", "", NULL, EVM_RESTART_WIFIDOG},
+			{"wifidog_enablewx5g", "", NULL, EVM_RESTART_WIFIDOG},
+			{"wifidog_enablewxguest", "", NULL, EVM_RESTART_WIFIDOG},
+			{"wifidog_enablewx5gguest", "", NULL, EVM_RESTART_WIFIDOG},
+			{"wifidog_Daemon", "", NULL, EVM_RESTART_WIFIDOG},
+			{"wifidog_Hostname", "", NULL, EVM_RESTART_WIFIDOG},
+			{"wifidog_HTTPPort", "", NULL, EVM_RESTART_WIFIDOG},
+			{"wifidog_sslenable", "", NULL, EVM_RESTART_WIFIDOG},
+			{"wifidog_id", "", NULL, EVM_RESTART_WIFIDOG},
+			{"wifidog_wanif", "", NULL, EVM_RESTART_WIFIDOG},
+			{"wifidog_lanif", "", NULL, EVM_RESTART_WIFIDOG},
+			{"wifidog_Port", "", NULL, EVM_RESTART_WIFIDOG},
+			{"wifidog_Interval", "", NULL, EVM_RESTART_WIFIDOG},
+			{"wifidog_Timeout", "", NULL, EVM_RESTART_WIFIDOG},
+			{"wifidog_MaxConn", "", NULL, EVM_RESTART_WIFIDOG},
+			{"wifidog_MACList", "", NULL, EVM_RESTART_WIFIDOG},
+			{"wifidog_Path", "", NULL, EVM_RESTART_WIFIDOG},
+			{"wifidog_bmdurl", "", NULL, EVM_RESTART_WIFIDOG},
+			{"wifidog_SSLCertPath", "", NULL, EVM_RESTART_WIFIDOG},
+			
+#endif
+
+#if defined(APP_NGROK)
+			{"ngrok_enable", "", NULL, EVM_RESTART_NGROK},
+			{"ngrok_Hostname", "", NULL, EVM_RESTART_NGROK},
+			{"ngrok_HTTPPort", "", NULL, EVM_RESTART_NGROK},
+			{"ngrok_userid", "", NULL, EVM_RESTART_NGROK},
+			{"ngrok_password", "", NULL, EVM_RESTART_NGROK},
+			{"ngrok_lanif", "", NULL, EVM_RESTART_NGROK},
+			{"ngrok_authpassword", "", NULL, EVM_RESTART_NGROK},
+			{"ngrok_authuserid", "", NULL, EVM_RESTART_NGROK},
+			{"ngrok_ctport", "", NULL, EVM_RESTART_NGROK},
+			{"ngrok_getway", "", NULL, EVM_RESTART_NGROK},
+			{"ngrok_domain", "", NULL, EVM_RESTART_NGROK},
+#endif
+
 			{"wins_enable", "", NULL, EVM_RESTART_WINS|EVM_REAPPLY_VPNSVR},
 			{"lltd_enable", "", NULL, EVM_RESTART_LLTD},
 			{"adsc_enable", "", NULL, EVM_RESTART_ADSC},
@@ -879,6 +918,13 @@
 		{EVM_RESTART_VPNCLI,		EVT_RESTART_VPNCLI,		RCN_RESTART_VPNCLI,	EVM_RESTART_FIREWALL},
 		{EVM_RESTART_HTTPD,		EVT_RESTART_HTTPD,		RCN_RESTART_HTTPD,	EVM_RESTART_FIREWALL},
 		{EVM_RESTART_SSHD,		EVT_RESTART_SSHD,		RCN_RESTART_SSHD,	EVM_RESTART_FIREWALL},
+#if defined(APP_WIFIDOG)
+		{EVM_RESTART_WIFIDOG,		EVT_RESTART_WIFIDOG,		RCN_RESTART_WIFIDOG,	EVM_RESTART_FIREWALL},
+#endif
+#if defined(APP_NGROK)
+		{EVM_RESTART_NGROK,		EVT_RESTART_NGROK,		RCN_RESTART_NGROK,	EVM_RESTART_FIREWALL},
+#endif
+
 		{EVM_RESTART_TELNETD,		EVT_RESTART_TELNETD,		RCN_RESTART_TELNETD,	0},
 #if defined(APP_SMBD) || defined(APP_NMBD)
 		{EVM_RESTART_WINS,		EVT_RESTART_WINS,		RCN_RESTART_WINS,	EVM_RESTART_DHCPD|EVM_RESTART_NMBD|EVM_REAPPLY_VPNSVR},

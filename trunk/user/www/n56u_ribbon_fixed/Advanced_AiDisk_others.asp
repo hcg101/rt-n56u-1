@@ -782,9 +782,9 @@ function done_validating(action){
                                             <th>
                                                 <#StoragePPortTRMD#>
                                             </th>
-                                            <td colspan="2">
+                                            <td>
                                                 <input type="text" maxlength="5" size="5" name="trmd_pport" class="input" value="<% nvram_get_x("", "trmd_pport"); %>" onkeypress="return is_number(this,event);"/>
-                                            </td>
+                                          
                                         </tr>
                                         <tr id="row_trmd_rport">
                                             <th width="50%">
@@ -826,6 +826,10 @@ function done_validating(action){
                                             </th>
                                             <td colspan="2">
                                                 <input type="text" maxlength="5" size="5" name="aria_pport" class="input" value="<% nvram_get_x("", "aria_pport"); %>" onkeypress="return is_number(this,event);"/>
+                                            </td>
+  </td>
+<td>
+                                               <a href="http://<% nvram_get_x("LANHostConfig","lan_ipaddr"); %>/yaaw/index.html">yaaw control</a>
                                             </td>
                                         </tr>
                                         <tr id="row_aria_rport">

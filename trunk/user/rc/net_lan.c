@@ -102,7 +102,7 @@ init_bridge(int is_ap_mode)
 	if (!is_ap_mode)
 	{
 		/* set switch bridge mode and vlan isolation */
-		switch_config_vlan(1);
+		switch_config_vlan(0);
 	}
 	else
 	{

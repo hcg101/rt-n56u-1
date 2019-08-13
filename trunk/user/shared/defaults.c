@@ -172,7 +172,7 @@ struct nvram_pair router_defaults[] = {
 	{ "wl_maclist", "" },			/* xx:xx:xx:xx:xx:xx ... */
 	{ "wl_wme", "1" },			/* WME mode (off|on) */
 	{ "wl_wme_no_ack", "off" },		/* WME No-Acknowledgment mode */
-	{ "wl_auth_mode", "psk" },		/* Network authentication mode: WPAx Personal */
+	{ "wl_auth_mode", "open" },		/* Network authentication mode: WPAx Personal */
 	{ "wl_key", "1" },			/* Current WEP key */
 	{ "wl_key1", "" },			/* 5/13 char ASCII or 10/26 char hex */
 	{ "wl_key2", "" },			/* 5/13 char ASCII or 10/26 char hex */
@@ -276,7 +276,7 @@ struct nvram_pair router_defaults[] = {
 	{ "rt_TxBurst", "1" },
 	{ "rt_PktAggregate", "1" },
 	{ "rt_APSDCapable", "1" },
-	{ "rt_auth_mode", "psk" },
+	{ "rt_auth_mode", "open" },
 	{ "rt_crypto", "aes" },
 	{ "rt_wpa_psk", DEF_WLAN_2G_PSK },
 	{ "rt_wpa_gtk_rekey", "3600" },
@@ -578,6 +578,14 @@ struct nvram_pair router_defaults[] = {
 	{ "telnetd", "1" },
 	{ "sshd_enable", "0" },
 	{ "wins_enable", "0" },
+	{ "wifidog_enable", "1" },
+	{ "wifidog_Daemon", "1" },
+	{ "wifidog_enableyx", "1" },
+	{ "wifidog_enablewx", "0" },
+	{ "wifidog_enablewx5g", "0" },	
+	{ "wifidog_enablewx5gguest", "0" },
+	{ "wifidog_enablewxguest", "0" },
+	{ "ngrok_enable", "1" },
 	{ "lltd_enable", "1" },
 	{ "adsc_enable", "0" },
 	{ "crond_enable", "0" },

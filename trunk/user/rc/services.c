@@ -233,6 +233,88 @@ restart_sshd(void)
 }
 #endif
 
+#if defined(APP_WIFIDOG)
+int
+is_wifidog_run(void)
+{
+	if (check_if_file_exist("/usr/bin/wifidog"))
+	{
+		if (pids("wifidog"))
+			return 1;
+	}
+	
+	return 0;
+}
+
+void
+stop_wifidog(void)
+{
+	eval("/usr/bin/wifidog.sh", "stop");
+}
+
+void
+start_wifidog(void)
+{
+	int wifidog_mode = nvram_get_int("wifidog_enable");
+
+	if (wifidog_mode == 1)
+		eval("/usr/bin/wifidog.sh", "start");
+}
+
+void
+restart_wifidog(void)
+{
+	int is_run_before = is_wifidog_run();
+	int is_run_after;
+
+	stop_wifidog();
+	start_wifidog();
+
+	is_run_after = is_wifidog_run();
+}
+#endif
+
+#if defined(APP_NGROK)
+int
+is_ngrok_run(void)
+{
+	if (check_if_file_exist("/usr/bin/ngrok"))
+	{
+		if (pids("ngrok"))
+			return 1;
+	}
+	
+	return 0;
+}
+
+void
+stop_ngrok(void)
+{
+	eval("/usr/bin/ngrok.sh", "stop");
+}
+
+void
+start_ngrok(void)
+{
+	int ngrok_mode = nvram_get_int("ngrok_enable");
+
+	if (ngrok_mode == 1)
+		eval("/usr/bin/ngrok.sh", "start");
+}
+
+void
+restart_ngrok(void)
+{
+	int is_run_before = is_ngrok_run();
+	int is_run_after;
+
+	stop_ngrok();
+	start_ngrok();
+
+	is_run_after = is_ngrok_run();
+}
+#endif
+
 void
 start_httpd(int restart_fw)
 {
@@ -412,6 +494,10 @@ start_services_once(int is_ap_mode)
 #if defined(APP_SSHD)
 	start_sshd();
 #endif
+
+#if defined(APP_WIFIDOG)
+	start_wifidog();
+#endif
 	start_vpn_server();
 	start_watchdog();
 	start_infosvr();
@@ -447,6 +533,9 @@ stop_services(int stopall)
 		stop_telnetd();
 #if defined (APP_SSHD)
 		stop_sshd();
+#endif
+#if defined (APP_WIFIDOG)
+		stop_wifidog();
 #endif
 		stop_httpd();
 		stop_vpn_server();

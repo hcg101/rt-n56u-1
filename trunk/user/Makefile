@@ -22,6 +22,7 @@ FS_NTFS_ENABLED=n
 STORAGE_ENABLED=n
 OPENSSH_ENABLED=n
 DROPBEAR_ENABLED=n
+TTYD_ENABLED=n
 SAMBA_ENABLED=n
 ifneq ($(CONFIG_FIRMWARE_INCLUDE_OPENSSH),y)
 ifeq ($(CONFIG_FIRMWARE_INCLUDE_DROPBEAR),y)
@@ -36,6 +37,10 @@ endif
 
 ifeq ($(CONFIG_FIRMWARE_INCLUDE_WINS),y)
 SAMBA_ENABLED=y
+endif
+
+ifeq ($(CONFIG_FIRMWARE_INCLUDE_TTYD),y)
+TTYD_ENABLED=y
 endif
 
 ifdef CONFIG_MMC_BLOCK
@@ -76,6 +81,9 @@ dir_  =
 dir_y						+= busybox
 dir_y						+= iptables
 dir_$(CONFIG_FIRMWARE_INCLUDE_IPSET)		+= ipset
+dir_$(CONFIG_FIRMWARE_INCLUDE_WIFIDOG)		+= wifidog
+dir_$(CONFIG_FIRMWARE_INCLUDE_WOLFSSL)		+= wolfssl
+dir_$(CONFIG_FIRMWARE_INCLUDE_NGROK)		+= ngrok
 dir_y						+= ebtables
 dir_y						+= iproute2
 dir_y						+= wireless_tools
@@ -110,6 +118,7 @@ dir_$(CONFIG_FIRMWARE_INCLUDE_OPENVPN)		+= openvpn
 dir_$(CONFIG_FIRMWARE_INCLUDE_SSWAN)		+= strongswan
 dir_$(CONFIG_FIRMWARE_INCLUDE_XUPNPD)		+= xupnpd
 dir_$(CONFIG_FIRMWARE_INCLUDE_TCPDUMP)		+= tcpdump
+dir_$(TTYD_ENABLED)				+= ttyd
 dir_$(SAMBA_ENABLED)				+= samba3
 
 ifdef CONFIG_BLK_DEV_SD
@@ -138,6 +147,7 @@ dir_$(CONFIG_FIRMWARE_INCLUDE_MINIDLNA)		+= minidlna
 dir_$(CONFIG_FIRMWARE_INCLUDE_FIREFLY)		+= firefly
 dir_$(CONFIG_FIRMWARE_INCLUDE_TRANSMISSION)	+= transmission
 dir_$(CONFIG_FIRMWARE_INCLUDE_ARIA)		+= aria2
+
 endif
 
 ifdef CONFIG_MTD_UBI

@@ -5,6 +5,8 @@ LDFLAGS += -Wl,--gc-sections
 
 THISDIR = $(shell pwd)
 
+#+kmod-ipt-core +libip4tc +IPV6:libip6tc +libxtables
+
 all:	config_test
 	$(MAKE) -C $(SRC_NAME)
 
@@ -65,6 +67,7 @@ endif
 		--prefix= \
 		--enable-static \
 		--disable-shared \
+		--enable-devel	\
 		--with-xtlibdir=/usr/lib/xtables \
 		--with-kernel=$(ROOTDIR)/$(LINUXDIR) \
 		$(if $(CONFIG_IPV6),--enable-ipv6,--disable-ipv6) \
