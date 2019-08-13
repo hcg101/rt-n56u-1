@@ -1,1 +1,0 @@
-/opt/rt-n56u/trunk/user/ttyd/ttyd-1.0.0/CMakeFiles/ttyd.dir
