@@ -109,3 +109,13 @@ clean:
 	rm -f *.s *.S *.o */*.o *.obj lib tags core .pure .nfs* *.old *.bak fluff
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+
+cbc128.o: cbc128.c modes_lcl.h
+ccm128.o: ccm128.c modes_lcl.h
+cfb128.o: cfb128.c modes_lcl.h
+ctr128.o: ctr128.c modes_lcl.h
+cts128.o: cts128.c modes_lcl.h
+gcm128.o: gcm128.c modes_lcl.h
+ofb128.o: modes_lcl.h ofb128.c
+wrap128.o: ../../e_os.h ../cryptlib.h wrap128.c
+xts128.o: modes_lcl.h xts128.c

@@ -103,3 +103,7 @@ clean:
 	rm -f *.s *.S *.o *.obj lib tags core .pure .nfs* *.old *.bak fluff
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+
+rc4_enc.o: ../../e_os.h ../cryptlib.h rc4_enc.c rc4_locl.h
+rc4_skey.o: ../../e_os.h ../cryptlib.h rc4_locl.h rc4_skey.c
+rc4_utl.o: rc4_utl.c

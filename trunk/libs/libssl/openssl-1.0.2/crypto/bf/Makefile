@@ -86,3 +86,9 @@ clean:
 	rm -f *.s *.o *.obj lib tags core .pure .nfs* *.old *.bak fluff
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+
+bf_cfb64.o: bf_cfb64.c bf_locl.h
+bf_ecb.o: bf_ecb.c bf_locl.h
+bf_enc.o: bf_enc.c bf_locl.h
+bf_ofb64.o: bf_locl.h bf_ofb64.c
+bf_skey.o: bf_locl.h bf_pi.h bf_skey.c

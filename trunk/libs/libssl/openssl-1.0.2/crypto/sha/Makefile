@@ -138,3 +138,10 @@ clean:
 	rm -f *.s *.S *.o *.obj lib tags core .pure .nfs* *.old *.bak fluff
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+
+sha1_one.o: sha1_one.c
+sha1dgst.o: ../md32_common.h sha1dgst.c sha_locl.h
+sha256.o: ../md32_common.h sha256.c
+sha512.o: ../../e_os.h ../cryptlib.h sha512.c
+sha_dgst.o: sha_dgst.c
+sha_one.o: sha_one.c

@@ -100,3 +100,67 @@ clean:
 	rm -f *.o *.obj lib tags core .pure .nfs* *.old *.bak fluff
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+
+bio_b64.o: ../../e_os.h ../cryptlib.h bio_b64.c
+bio_enc.o: ../../e_os.h ../cryptlib.h bio_enc.c
+bio_md.o: ../../e_os.h ../cryptlib.h bio_md.c
+bio_ok.o: ../../e_os.h ../cryptlib.h bio_ok.c
+c_all.o: ../../e_os.h ../cryptlib.h c_all.c
+c_allc.o: ../../e_os.h ../cryptlib.h c_allc.c
+c_alld.o: ../../e_os.h ../cryptlib.h c_alld.c
+digest.o: ../../e_os.h ../cryptlib.h digest.c
+e_aes.o: ../modes/modes_lcl.h e_aes.c evp_locl.h
+e_aes_cbc_hmac_sha1.o: ../../e_os.h ../constant_time_locl.h
+e_aes_cbc_hmac_sha1.o: ../modes/modes_lcl.h e_aes_cbc_hmac_sha1.c
+e_aes_cbc_hmac_sha256.o: ../../e_os.h ../constant_time_locl.h
+e_aes_cbc_hmac_sha256.o: ../modes/modes_lcl.h e_aes_cbc_hmac_sha256.c
+e_bf.o: ../../e_os.h ../cryptlib.h e_bf.c evp_locl.h
+e_camellia.o: ../modes/modes_lcl.h e_camellia.c evp_locl.h
+e_cast.o: ../../e_os.h ../cryptlib.h e_cast.c
+e_des.o: ../../e_os.h ../cryptlib.h e_des.c evp_locl.h
+e_des3.o: ../../e_os.h ../cryptlib.h e_des3.c evp_locl.h
+e_idea.o: ../../e_os.h ../cryptlib.h e_idea.c
+e_null.o: ../../e_os.h ../cryptlib.h e_null.c
+e_old.o: e_old.c
+e_rc2.o: ../../e_os.h ../cryptlib.h e_rc2.c
+e_rc4.o: ../../e_os.h ../cryptlib.h e_rc4.c evp_locl.h
+e_rc4_hmac_md5.o: e_rc4_hmac_md5.c
+e_rc5.o: ../../e_os.h ../cryptlib.h e_rc5.c
+e_seed.o: e_seed.c
+e_xcbc_d.o: ../../e_os.h ../cryptlib.h e_xcbc_d.c evp_locl.h
+encode.o: ../../e_os.h ../cryptlib.h encode.c
+evp_acnf.o: ../../e_os.h ../cryptlib.h evp_acnf.c
+evp_cnf.o: ../../e_os.h ../cryptlib.h evp_cnf.c
+evp_enc.o: ../../e_os.h ../cryptlib.h evp_enc.c evp_locl.h
+evp_err.o: evp_err.c
+evp_key.o: ../../e_os.h ../cryptlib.h evp_key.c
+evp_lib.o: ../../e_os.h ../cryptlib.h evp_lib.c
+evp_pbe.o: ../../e_os.h ../cryptlib.h evp_locl.h evp_pbe.c
+evp_pkey.o: ../../e_os.h ../asn1/asn1_locl.h ../cryptlib.h evp_pkey.c
+m_dss.o: ../../e_os.h ../cryptlib.h m_dss.c
+m_dss1.o: ../../e_os.h ../cryptlib.h m_dss1.c
+m_ecdsa.o: ../../e_os.h ../cryptlib.h m_ecdsa.c
+m_md2.o: ../../e_os.h ../cryptlib.h m_md2.c
+m_md4.o: ../../e_os.h ../cryptlib.h evp_locl.h m_md4.c
+m_md5.o: ../../e_os.h ../cryptlib.h evp_locl.h m_md5.c
+m_mdc2.o: ../../e_os.h ../cryptlib.h m_mdc2.c
+m_null.o: ../../e_os.h ../cryptlib.h m_null.c
+m_ripemd.o: ../../e_os.h ../cryptlib.h m_ripemd.c
+m_sha.o: ../../e_os.h ../cryptlib.h m_sha.c
+m_sha1.o: ../../e_os.h ../cryptlib.h m_sha1.c
+m_sigver.o: ../../e_os.h ../cryptlib.h evp_locl.h m_sigver.c
+m_wp.o: ../../e_os.h ../cryptlib.h m_wp.c
+names.o: ../../e_os.h ../cryptlib.h names.c
+p5_crpt.o: ../../e_os.h ../cryptlib.h p5_crpt.c
+p5_crpt2.o: ../../e_os.h ../cryptlib.h evp_locl.h p5_crpt2.c
+p_dec.o: ../../e_os.h ../cryptlib.h p_dec.c
+p_enc.o: ../../e_os.h ../cryptlib.h p_enc.c
+p_lib.o: ../../e_os.h ../asn1/asn1_locl.h ../cryptlib.h p_lib.c
+p_open.o: ../../e_os.h ../cryptlib.h p_open.c
+p_seal.o: ../../e_os.h ../cryptlib.h p_seal.c
+p_sign.o: ../../e_os.h ../cryptlib.h p_sign.c
+p_verify.o: ../../e_os.h ../cryptlib.h p_verify.c
+pmeth_fn.o: ../../e_os.h ../cryptlib.h evp_locl.h pmeth_fn.c
+pmeth_gn.o: ../../e_os.h ../cryptlib.h evp_locl.h pmeth_gn.c
+pmeth_lib.o: ../../e_os.h ../asn1/asn1_locl.h ../cryptlib.h evp_locl.h
+pmeth_lib.o: pmeth_lib.c

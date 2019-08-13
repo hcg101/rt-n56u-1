@@ -2202,11 +2202,12 @@ ej_firmware_caps_hook(int eid, webs_t wp, int argc, char **argv)
 #else
 	int found_app_wifidog = 0;
 #endif
+
 #if defined(APP_NGROK)
 	int found_app_ngrok = 1;
 #else
 	int found_app_ngrok = 0;
-
+#endif
 #if defined(APP_SCUT)
 	int found_app_scutclient = 1;
 #else

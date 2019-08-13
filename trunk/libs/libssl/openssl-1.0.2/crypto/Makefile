@@ -150,3 +150,20 @@ dclean:
 	@target=dclean; $(RECURSIVE_MAKE)
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+
+cpt_err.o: cpt_err.c
+cryptlib.o: ../e_os.h cryptlib.c cryptlib.h
+cversion.o: ../e_os.h buildinf.h cryptlib.h cversion.c
+ebcdic.o: ebcdic.c
+ex_data.o: ../e_os.h cryptlib.h ex_data.c
+fips_ers.o: fips_ers.c
+getenv.o: ../e_os.h cryptlib.h getenv.c
+mem.o: ../e_os.h cryptlib.h mem.c
+mem_clr.o: mem_clr.c
+mem_dbg.o: ../e_os.h cryptlib.h mem_dbg.c
+o_dir.o: ../e_os.h LPdir_unix.c o_dir.c o_dir.h
+o_fips.o: ../e_os.h cryptlib.h o_fips.c
+o_init.o: ../e_os.h o_init.c
+o_str.o: ../e_os.h o_str.c o_str.h
+o_time.o: o_time.c o_time.h
+uid.o: uid.c

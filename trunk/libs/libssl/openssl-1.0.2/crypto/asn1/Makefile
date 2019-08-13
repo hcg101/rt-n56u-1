@@ -108,3 +108,81 @@ clean:
 
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+
+a_bitstr.o: ../../e_os.h ../cryptlib.h a_bitstr.c
+a_bool.o: ../../e_os.h ../cryptlib.h a_bool.c
+a_bytes.o: ../../e_os.h ../cryptlib.h a_bytes.c
+a_d2i_fp.o: ../../e_os.h ../cryptlib.h a_d2i_fp.c
+a_digest.o: ../../e_os.h ../cryptlib.h a_digest.c
+a_dup.o: ../../e_os.h ../cryptlib.h a_dup.c
+a_enum.o: ../../e_os.h ../cryptlib.h a_enum.c
+a_gentm.o: ../../e_os.h ../cryptlib.h ../o_time.h a_gentm.c asn1_locl.h
+a_i2d_fp.o: ../../e_os.h ../cryptlib.h a_i2d_fp.c
+a_int.o: ../../e_os.h ../cryptlib.h a_int.c
+a_mbstr.o: ../../e_os.h ../cryptlib.h a_mbstr.c
+a_object.o: ../../e_os.h ../cryptlib.h a_object.c
+a_octet.o: ../../e_os.h ../cryptlib.h a_octet.c
+a_print.o: ../../e_os.h ../cryptlib.h a_print.c
+a_set.o: ../../e_os.h ../cryptlib.h a_set.c
+a_sign.o: ../../e_os.h ../cryptlib.h a_sign.c asn1_locl.h
+a_strex.o: ../../e_os.h ../cryptlib.h a_strex.c charmap.h
+a_strnid.o: ../../e_os.h ../cryptlib.h a_strnid.c
+a_time.o: ../../e_os.h ../cryptlib.h ../o_time.h a_time.c asn1_locl.h
+a_type.o: ../../e_os.h ../cryptlib.h a_type.c
+a_utctm.o: ../../e_os.h ../cryptlib.h ../o_time.h a_utctm.c asn1_locl.h
+a_utf8.o: ../../e_os.h ../cryptlib.h a_utf8.c
+a_verify.o: ../../e_os.h ../cryptlib.h a_verify.c asn1_locl.h
+ameth_lib.o: ../../e_os.h ../cryptlib.h ameth_lib.c asn1_locl.h
+asn1_err.o: asn1_err.c
+asn1_gen.o: ../../e_os.h ../cryptlib.h asn1_gen.c
+asn1_lib.o: ../../e_os.h ../cryptlib.h asn1_lib.c
+asn1_par.o: ../../e_os.h ../cryptlib.h asn1_par.c
+asn_mime.o: ../../e_os.h ../cryptlib.h asn1_locl.h asn_mime.c
+asn_moid.o: ../../e_os.h ../cryptlib.h asn_moid.c
+asn_pack.o: ../../e_os.h ../cryptlib.h asn_pack.c
+bio_asn1.o: bio_asn1.c
+bio_ndef.o: bio_ndef.c
+d2i_pr.o: ../../e_os.h ../cryptlib.h asn1_locl.h d2i_pr.c
+d2i_pu.o: ../../e_os.h ../cryptlib.h d2i_pu.c
+evp_asn1.o: ../../e_os.h ../cryptlib.h evp_asn1.c
+f_enum.o: ../../e_os.h ../cryptlib.h f_enum.c
+f_int.o: ../../e_os.h ../cryptlib.h f_int.c
+f_string.o: ../../e_os.h ../cryptlib.h f_string.c
+i2d_pr.o: ../../e_os.h ../cryptlib.h asn1_locl.h i2d_pr.c
+i2d_pu.o: ../../e_os.h ../cryptlib.h i2d_pu.c
+n_pkey.o: ../../e_os.h ../cryptlib.h n_pkey.c
+nsseq.o: nsseq.c
+p5_pbe.o: ../../e_os.h ../cryptlib.h p5_pbe.c
+p5_pbev2.o: ../../e_os.h ../cryptlib.h p5_pbev2.c
+p8_pkey.o: ../../e_os.h ../cryptlib.h p8_pkey.c
+t_bitst.o: ../../e_os.h ../cryptlib.h t_bitst.c
+t_crl.o: ../../e_os.h ../cryptlib.h t_crl.c
+t_pkey.o: ../../e_os.h ../cryptlib.h t_pkey.c
+t_req.o: ../../e_os.h ../cryptlib.h t_req.c
+t_spki.o: ../../e_os.h ../cryptlib.h t_spki.c
+t_x509.o: ../../e_os.h ../cryptlib.h asn1_locl.h t_x509.c
+t_x509a.o: ../../e_os.h ../cryptlib.h t_x509a.c
+tasn_dec.o: tasn_dec.c
+tasn_enc.o: ../../e_os.h ../cryptlib.h tasn_enc.c
+tasn_fre.o: asn1_int.h tasn_fre.c
+tasn_new.o: asn1_int.h tasn_new.c
+tasn_prn.o: ../../e_os.h ../cryptlib.h asn1_locl.h tasn_prn.c
+tasn_typ.o: tasn_typ.c
+tasn_utl.o: tasn_utl.c
+x_algor.o: x_algor.c
+x_attrib.o: ../../e_os.h ../cryptlib.h x_attrib.c
+x_bignum.o: ../../e_os.h ../cryptlib.h x_bignum.c
+x_crl.o: ../../e_os.h ../cryptlib.h asn1_locl.h x_crl.c
+x_exten.o: x_exten.c
+x_info.o: ../../e_os.h ../cryptlib.h x_info.c
+x_long.o: ../../e_os.h ../cryptlib.h x_long.c
+x_name.o: ../../e_os.h ../cryptlib.h asn1_locl.h x_name.c
+x_nx509.o: x_nx509.c
+x_pkey.o: ../../e_os.h ../cryptlib.h x_pkey.c
+x_pubkey.o: ../../e_os.h ../cryptlib.h asn1_locl.h x_pubkey.c
+x_req.o: ../../e_os.h ../cryptlib.h x_req.c
+x_sig.o: ../../e_os.h ../cryptlib.h x_sig.c
+x_spki.o: ../../e_os.h ../cryptlib.h x_spki.c
+x_val.o: ../../e_os.h ../cryptlib.h x_val.c
+x_x509.o: ../../e_os.h ../cryptlib.h x_x509.c
+x_x509a.o: ../../e_os.h ../cryptlib.h x_x509a.c

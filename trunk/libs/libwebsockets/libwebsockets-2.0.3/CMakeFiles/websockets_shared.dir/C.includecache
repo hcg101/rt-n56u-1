@@ -494,36 +494,6 @@ sys/socket.h
 sys/types.h
 -
 
-/opt/rt-n56u/trunk/stage/include/openssl/ec.h
-openssl/opensslconf.h
--
-openssl/asn1.h
--
-openssl/symhacks.h
--
-openssl/bn.h
--
-
-/opt/rt-n56u/trunk/stage/include/openssl/ecdh.h
-openssl/opensslconf.h
--
-openssl/ec.h
--
-openssl/ossl_typ.h
--
-openssl/bn.h
--
-
-/opt/rt-n56u/trunk/stage/include/openssl/ecdsa.h
-openssl/opensslconf.h
--
-openssl/ec.h
--
-openssl/ossl_typ.h
--
-openssl/bn.h
--
-
 /opt/rt-n56u/trunk/stage/include/openssl/err.h
 openssl/e_os2.h
 -
@@ -789,6 +759,8 @@ openssl/conf.h
 -
 
 /opt/rt-n56u/trunk/stage/include/zconf.h
+stddef.h
+-
 windows.h
 -
 limits.h

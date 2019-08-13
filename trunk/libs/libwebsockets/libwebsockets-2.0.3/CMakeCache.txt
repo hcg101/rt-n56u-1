@@ -541,9 +541,9 @@ CPACK_BINARY_TZ-ADVANCED:INTERNAL=1
 //Details about finding Git
 FIND_PACKAGE_MESSAGE_DETAILS_Git:INTERNAL=[/usr/bin/git][v()]
 //Details about finding OpenSSL
-FIND_PACKAGE_MESSAGE_DETAILS_OpenSSL:INTERNAL=[/opt/rt-n56u/trunk/stage/lib/libssl.so;/opt/rt-n56u/trunk/stage/lib/libcrypto.so][/opt/rt-n56u/trunk/stage/include][v1.0.2l()]
+FIND_PACKAGE_MESSAGE_DETAILS_OpenSSL:INTERNAL=[/opt/rt-n56u/trunk/stage/lib/libssl.so;/opt/rt-n56u/trunk/stage/lib/libcrypto.so][/opt/rt-n56u/trunk/stage/include][v1.0.2q()]
 //Details about finding ZLIB
-FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[/opt/rt-n56u/trunk/stage/lib/libz.so][/opt/rt-n56u/trunk/stage/include][v1.2.8()]
+FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[/opt/rt-n56u/trunk/stage/lib/libz.so][/opt/rt-n56u/trunk/stage/include][v1.2.11()]
 //ADVANCED property for variable: GIT_EXECUTABLE
 GIT_EXECUTABLE-ADVANCED:INTERNAL=1
 //Have function bzero

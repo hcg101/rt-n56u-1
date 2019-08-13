@@ -194,7 +194,6 @@ dir_$(LIBS_INCLUDE_LIBICONV)			+= libiconv
 dir_$(LIBS_INCLUDE_LIBSSL)			+= libssl
 dir_$(LIBS_INCLUDE_LIBUSB_0)			+= libusb
 dir_$(LIBS_INCLUDE_LIBUSB_1)			+= libusb-1.0
-
 dir_$(LIBS_INCLUDE_LIBRTLSDR)			+= librtlsdr
 dir_$(LIBS_INCLUDE_LIBJSON_C)			+= libjson-c
 dir_$(LIBS_INCLUDE_LIBWEBSOCKETS)		+= libwebsockets
@@ -204,7 +203,7 @@ dir_$(LIBS_INCLUDE_LIBSODIUM)			+= libsodium
 dir_$(LIBS_INCLUDE_LIBUDNS)			+= libudns
 dir_$(LIBS_INCLUDE_MBEDTLS)			+= mbedtls
 dir_$(LIBS_INCLUDE_CURL)			+= libcurl
->>>>>>> f27d90fe49687f8c472df4d6035d554075e86a07
+#>>>>>>> f27d90fe49687f8c472df4d6035d554075e86a07
 dir_y						+= libnfnetlink
 # ipset shared libs
 ifneq ($(CONFIG_WITHOUT_KERNEL),y)

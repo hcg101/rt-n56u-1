@@ -81,3 +81,19 @@ clean:
 	rm -f *.o *.obj lib tags core .pure .nfs* *.old *.bak fluff
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+
+p12_add.o: ../../e_os.h ../cryptlib.h p12_add.c
+p12_asn.o: ../../e_os.h ../cryptlib.h p12_asn.c
+p12_attr.o: ../../e_os.h ../cryptlib.h p12_attr.c
+p12_crpt.o: ../../e_os.h ../cryptlib.h p12_crpt.c
+p12_crt.o: ../../e_os.h ../cryptlib.h p12_crt.c
+p12_decr.o: ../../e_os.h ../cryptlib.h p12_decr.c
+p12_init.o: ../../e_os.h ../cryptlib.h p12_init.c
+p12_key.o: ../../e_os.h ../cryptlib.h p12_key.c
+p12_kiss.o: ../../e_os.h ../cryptlib.h p12_kiss.c
+p12_mutl.o: ../../e_os.h ../cryptlib.h p12_mutl.c
+p12_npas.o: p12_npas.c
+p12_p8d.o: ../../e_os.h ../cryptlib.h p12_p8d.c
+p12_p8e.o: ../../e_os.h ../cryptlib.h p12_p8e.c
+p12_utl.o: ../../e_os.h ../cryptlib.h p12_utl.c
+pk12err.o: pk12err.c

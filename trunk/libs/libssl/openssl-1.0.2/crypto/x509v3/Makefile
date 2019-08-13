@@ -85,3 +85,41 @@ clean:
 	rm -f *.o *.obj lib tags core .pure .nfs* *.old *.bak fluff
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+
+pcy_cache.o: ../../e_os.h ../cryptlib.h pcy_cache.c pcy_int.h
+pcy_data.o: ../../e_os.h ../cryptlib.h pcy_data.c pcy_int.h
+pcy_lib.o: ../../e_os.h ../cryptlib.h pcy_int.h pcy_lib.c
+pcy_map.o: ../../e_os.h ../cryptlib.h pcy_int.h pcy_map.c
+pcy_node.o: pcy_int.h pcy_node.c
+pcy_tree.o: ../../e_os.h ../cryptlib.h pcy_int.h pcy_tree.c
+v3_addr.o: ../../e_os.h ../cryptlib.h v3_addr.c
+v3_akey.o: ../../e_os.h ../cryptlib.h v3_akey.c
+v3_akeya.o: ../../e_os.h ../cryptlib.h v3_akeya.c
+v3_alt.o: ../../e_os.h ../cryptlib.h v3_alt.c
+v3_asid.o: ../../e_os.h ../cryptlib.h v3_asid.c
+v3_bcons.o: ../../e_os.h ../cryptlib.h v3_bcons.c
+v3_bitst.o: ../../e_os.h ../cryptlib.h v3_bitst.c
+v3_conf.o: ../../e_os.h ../cryptlib.h v3_conf.c
+v3_cpols.o: ../../e_os.h ../cryptlib.h pcy_int.h v3_cpols.c
+v3_crld.o: ../../e_os.h ../cryptlib.h v3_crld.c
+v3_enum.o: ../../e_os.h ../cryptlib.h v3_enum.c
+v3_extku.o: ../../e_os.h ../cryptlib.h v3_extku.c
+v3_genn.o: ../../e_os.h ../cryptlib.h v3_genn.c
+v3_ia5.o: ../../e_os.h ../cryptlib.h v3_ia5.c
+v3_info.o: ../../e_os.h ../cryptlib.h v3_info.c
+v3_int.o: ../../e_os.h ../cryptlib.h v3_int.c
+v3_lib.o: ../../e_os.h ../cryptlib.h ext_dat.h v3_lib.c
+v3_ncons.o: ../../e_os.h ../cryptlib.h v3_ncons.c
+v3_ocsp.o: ../../e_os.h ../cryptlib.h v3_ocsp.c
+v3_pci.o: ../../e_os.h ../cryptlib.h v3_pci.c
+v3_pcia.o: v3_pcia.c
+v3_pcons.o: ../../e_os.h ../cryptlib.h v3_pcons.c
+v3_pku.o: ../../e_os.h ../cryptlib.h v3_pku.c
+v3_pmaps.o: ../../e_os.h ../cryptlib.h v3_pmaps.c
+v3_prn.o: ../../e_os.h ../cryptlib.h v3_prn.c
+v3_purp.o: ../../e_os.h ../cryptlib.h v3_purp.c
+v3_scts.o: ../../e_os.h ../cryptlib.h v3_scts.c
+v3_skey.o: ../../e_os.h ../cryptlib.h v3_skey.c
+v3_sxnet.o: ../../e_os.h ../cryptlib.h v3_sxnet.c
+v3_utl.o: ../../e_os.h ../cryptlib.h v3_utl.c
+v3err.o: v3err.c

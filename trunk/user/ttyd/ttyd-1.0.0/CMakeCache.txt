@@ -326,7 +326,7 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding JSON-C
 FIND_PACKAGE_MESSAGE_DETAILS_JSON-C:INTERNAL=[/opt/rt-n56u/trunk/stage/lib/libjson-c.so][/opt/rt-n56u/trunk/stage/include/json-c][v()]
 //Details about finding OpenSSL
-FIND_PACKAGE_MESSAGE_DETAILS_OpenSSL:INTERNAL=[/opt/rt-n56u/trunk/stage/lib/libssl.so;/opt/rt-n56u/trunk/stage/lib/libcrypto.so][/opt/rt-n56u/trunk/stage/include][v1.0.2l()]
+FIND_PACKAGE_MESSAGE_DETAILS_OpenSSL:INTERNAL=[/opt/rt-n56u/trunk/stage/lib/libssl.so;/opt/rt-n56u/trunk/stage/lib/libcrypto.so][/opt/rt-n56u/trunk/stage/include][v1.0.2q()]
 //Details about finding PkgConfig
 FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/local/bin/pkg-config][v0.29()]
 //Have include lws_config.h

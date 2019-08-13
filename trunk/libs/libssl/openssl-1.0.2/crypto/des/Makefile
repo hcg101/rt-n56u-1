@@ -110,3 +110,30 @@ clean:
 	rm -f *.s *.S *.o *.obj des lib tags core .pure .nfs* *.old *.bak fluff
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+
+cbc_cksm.o: cbc_cksm.c des_locl.h
+cbc_enc.o: cbc_enc.c des_locl.h ncbc_enc.c
+cfb64ede.o: ../../e_os.h cfb64ede.c des_locl.h
+cfb64enc.o: cfb64enc.c des_locl.h
+cfb_enc.o: ../../e_os.h cfb_enc.c des_locl.h
+des_enc.o: des_enc.c des_locl.h ncbc_enc.c spr.h
+des_old.o: des_old.c
+des_old2.o: des_old2.c
+ecb3_enc.o: des_locl.h ecb3_enc.c
+ecb_enc.o: des_locl.h des_ver.h ecb_enc.c
+ede_cbcm_enc.o: des_locl.h ede_cbcm_enc.c
+enc_read.o: ../../e_os.h ../cryptlib.h des_locl.h enc_read.c
+enc_writ.o: ../../e_os.h ../cryptlib.h des_locl.h enc_writ.c
+fcrypt.o: des_locl.h fcrypt.c
+fcrypt_b.o: des_locl.h fcrypt_b.c
+ofb64ede.o: des_locl.h ofb64ede.c
+ofb64enc.o: des_locl.h ofb64enc.c
+ofb_enc.o: des_locl.h ofb_enc.c
+pcbc_enc.o: des_locl.h pcbc_enc.c
+qud_cksm.o: des_locl.h qud_cksm.c
+rand_key.o: rand_key.c
+read2pwd.o: read2pwd.c
+rpc_enc.o: des_locl.h des_ver.h rpc_des.h rpc_enc.c
+set_key.o: des_locl.h set_key.c
+str2key.o: des_locl.h str2key.c
+xcbc_enc.o: des_locl.h xcbc_enc.c

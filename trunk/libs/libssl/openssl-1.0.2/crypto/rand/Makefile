@@ -77,3 +77,13 @@ clean:
 	rm -f *.o *.obj lib tags core .pure .nfs* *.old *.bak fluff
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+
+md_rand.o: ../../e_os.h md_rand.c rand_lcl.h
+rand_egd.o: rand_egd.c
+rand_err.o: rand_err.c
+rand_lib.o: ../../e_os.h ../cryptlib.h rand_lib.c
+rand_nw.o: ../../e_os.h ../cryptlib.h rand_lcl.h rand_nw.c
+rand_os2.o: ../../e_os.h ../cryptlib.h rand_lcl.h rand_os2.c
+rand_unix.o: ../../e_os.h ../cryptlib.h rand_lcl.h rand_unix.c
+rand_win.o: ../../e_os.h ../cryptlib.h rand_lcl.h rand_win.c
+randfile.o: ../../e_os.h ../cryptlib.h randfile.c

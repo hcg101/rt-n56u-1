@@ -77,3 +77,6 @@ clean:
 	rm -f asm/mx86unix.cpp *.o asm/*.o *.obj lib tags core .pure .nfs* *.old *.bak fluff
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+
+md4_dgst.o: ../md32_common.h md4_dgst.c md4_locl.h
+md4_one.o: md4_one.c

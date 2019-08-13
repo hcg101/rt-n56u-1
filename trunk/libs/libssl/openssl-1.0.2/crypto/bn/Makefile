@@ -190,3 +190,34 @@ clean:
 	rm -f *.s *.S *.o *.obj lib tags core .pure .nfs* *.old *.bak fluff
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+
+bn_add.o: ../../e_os.h ../bn_int.h ../cryptlib.h bn_add.c bn_lcl.h
+bn_asm.o: ../../e_os.h ../bn_int.h ../cryptlib.h bn_asm.c bn_lcl.h
+bn_blind.o: ../../e_os.h ../bn_int.h ../cryptlib.h bn_blind.c bn_lcl.h
+bn_const.o: bn.h bn_const.c
+bn_ctx.o: ../../e_os.h ../bn_int.h ../cryptlib.h bn_ctx.c bn_lcl.h
+bn_depr.o: ../../e_os.h ../bn_int.h ../cryptlib.h bn_depr.c bn_lcl.h
+bn_div.o: ../../e_os.h ../bn_int.h ../cryptlib.h bn_div.c bn_lcl.h
+bn_err.o: bn_err.c
+bn_exp.o: ../../e_os.h ../bn_int.h ../constant_time_locl.h ../cryptlib.h
+bn_exp.o: bn_exp.c bn_lcl.h rsaz_exp.h
+bn_exp2.o: ../../e_os.h ../bn_int.h ../cryptlib.h bn_exp2.c bn_lcl.h
+bn_gcd.o: ../../e_os.h ../bn_int.h ../cryptlib.h bn_gcd.c bn_lcl.h
+bn_gf2m.o: ../../e_os.h ../bn_int.h ../cryptlib.h bn_gf2m.c bn_lcl.h
+bn_kron.o: ../../e_os.h ../bn_int.h ../cryptlib.h bn_kron.c bn_lcl.h
+bn_lib.o: ../../e_os.h ../bn_int.h ../cryptlib.h bn_lcl.h bn_lib.c
+bn_mod.o: ../../e_os.h ../bn_int.h ../cryptlib.h bn_lcl.h bn_mod.c
+bn_mont.o: ../../e_os.h ../bn_int.h ../cryptlib.h bn_lcl.h bn_mont.c
+bn_mpi.o: ../../e_os.h ../bn_int.h ../cryptlib.h bn_lcl.h bn_mpi.c
+bn_mul.o: ../../e_os.h ../bn_int.h ../cryptlib.h bn_lcl.h bn_mul.c
+bn_nist.o: ../../e_os.h ../bn_int.h ../cryptlib.h bn_lcl.h bn_nist.c
+bn_prime.o: ../../e_os.h ../bn_int.h ../cryptlib.h bn_lcl.h bn_prime.c
+bn_prime.o: bn_prime.h
+bn_print.o: ../../e_os.h ../bn_int.h ../cryptlib.h bn_lcl.h bn_print.c
+bn_rand.o: ../../e_os.h ../bn_int.h ../cryptlib.h bn_lcl.h bn_rand.c
+bn_recp.o: ../../e_os.h ../bn_int.h ../cryptlib.h bn_lcl.h bn_recp.c
+bn_shift.o: ../../e_os.h ../bn_int.h ../cryptlib.h bn_lcl.h bn_shift.c
+bn_sqr.o: ../../e_os.h ../bn_int.h ../cryptlib.h bn_lcl.h bn_sqr.c
+bn_sqrt.o: ../../e_os.h ../bn_int.h ../cryptlib.h bn_lcl.h bn_sqrt.c
+bn_word.o: ../../e_os.h ../bn_int.h ../cryptlib.h bn_lcl.h bn_word.c
+bn_x931p.o: bn_x931p.c

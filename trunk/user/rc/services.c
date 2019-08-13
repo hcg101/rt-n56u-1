@@ -313,7 +313,7 @@ restart_ngrok(void)
 	start_ngrok();
 
 	is_run_after = is_ngrok_run();
-
+#endif
 #if defined(APP_SCUT)
 int is_scutclient_run(void)
 {

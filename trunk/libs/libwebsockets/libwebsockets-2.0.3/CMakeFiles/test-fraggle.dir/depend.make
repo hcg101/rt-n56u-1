@@ -14,9 +14,6 @@ CMakeFiles/test-fraggle.dir/test-server/test-fraggle.c.o: /opt/rt-n56u/trunk/sta
 CMakeFiles/test-fraggle.dir/test-server/test-fraggle.c.o: /opt/rt-n56u/trunk/stage/include/openssl/dtls1.h
 CMakeFiles/test-fraggle.dir/test-server/test-fraggle.c.o: /opt/rt-n56u/trunk/stage/include/openssl/e_os2.h
 CMakeFiles/test-fraggle.dir/test-server/test-fraggle.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ebcdic.h
-CMakeFiles/test-fraggle.dir/test-server/test-fraggle.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ec.h
-CMakeFiles/test-fraggle.dir/test-server/test-fraggle.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdh.h
-CMakeFiles/test-fraggle.dir/test-server/test-fraggle.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdsa.h
 CMakeFiles/test-fraggle.dir/test-server/test-fraggle.c.o: /opt/rt-n56u/trunk/stage/include/openssl/err.h
 CMakeFiles/test-fraggle.dir/test-server/test-fraggle.c.o: /opt/rt-n56u/trunk/stage/include/openssl/evp.h
 CMakeFiles/test-fraggle.dir/test-server/test-fraggle.c.o: /opt/rt-n56u/trunk/stage/include/openssl/hmac.h

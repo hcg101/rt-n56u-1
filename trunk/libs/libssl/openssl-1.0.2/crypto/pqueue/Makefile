@@ -75,3 +75,5 @@ clean:
 	rm -f *.o *.obj lib tags core .pure .nfs* *.old *.bak fluff
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+
+pqueue.o: ../../e_os.h ../cryptlib.h pqueue.c pqueue.h

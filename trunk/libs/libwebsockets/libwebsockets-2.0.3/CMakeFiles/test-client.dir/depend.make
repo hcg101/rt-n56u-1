@@ -14,9 +14,6 @@ CMakeFiles/test-client.dir/test-server/test-client.c.o: /opt/rt-n56u/trunk/stage
 CMakeFiles/test-client.dir/test-server/test-client.c.o: /opt/rt-n56u/trunk/stage/include/openssl/dtls1.h
 CMakeFiles/test-client.dir/test-server/test-client.c.o: /opt/rt-n56u/trunk/stage/include/openssl/e_os2.h
 CMakeFiles/test-client.dir/test-server/test-client.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ebcdic.h
-CMakeFiles/test-client.dir/test-server/test-client.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ec.h
-CMakeFiles/test-client.dir/test-server/test-client.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdh.h
-CMakeFiles/test-client.dir/test-server/test-client.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdsa.h
 CMakeFiles/test-client.dir/test-server/test-client.c.o: /opt/rt-n56u/trunk/stage/include/openssl/err.h
 CMakeFiles/test-client.dir/test-server/test-client.c.o: /opt/rt-n56u/trunk/stage/include/openssl/evp.h
 CMakeFiles/test-client.dir/test-server/test-client.c.o: /opt/rt-n56u/trunk/stage/include/openssl/hmac.h

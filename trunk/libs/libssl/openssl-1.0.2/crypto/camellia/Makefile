@@ -89,3 +89,12 @@ clean:
 	rm -f *.s *.o *.obj lib tags core .pure .nfs* *.old *.bak fluff
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+
+camellia.o: camellia.c camellia.h cmll_locl.h
+cmll_cbc.o: cmll_cbc.c
+cmll_cfb.o: cmll_cfb.c
+cmll_ctr.o: cmll_ctr.c
+cmll_ecb.o: cmll_ecb.c cmll_locl.h
+cmll_misc.o: cmll_locl.h cmll_misc.c
+cmll_ofb.o: cmll_ofb.c
+cmll_utl.o: cmll_locl.h cmll_utl.c

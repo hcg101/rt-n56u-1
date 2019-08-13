@@ -93,3 +93,6 @@ clean:
 	rm -f *.s *.S *.o *.obj lib tags core .pure .nfs* *.old *.bak fluff
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+
+md5_dgst.o: ../md32_common.h md5_dgst.c md5_locl.h
+md5_one.o: md5_one.c

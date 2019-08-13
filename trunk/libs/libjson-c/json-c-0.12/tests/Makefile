@@ -447,10 +447,10 @@ AUTOCONF = ${SHELL} /opt/rt-n56u/trunk/libs/libjson-c/json-c-0.12/missing autoco
 AUTOHEADER = ${SHELL} /opt/rt-n56u/trunk/libs/libjson-c/json-c-0.12/missing autoheader
 AUTOMAKE = ${SHELL} /opt/rt-n56u/trunk/libs/libjson-c/json-c-0.12/missing automake-1.15
 AWK = gawk
-CC = /opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -mtune=1004kc
+CC = /opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2
 CCDEPMODE = depmode=gcc3
 CFLAGS = -Os -fomit-frame-pointer -pipe  -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security   -Wno-pointer-sign -ffunction-sections -fdata-sections
-CPP = /opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -mtune=1004kc -E
+CPP = /opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -E
 CPPFLAGS = 
 CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H

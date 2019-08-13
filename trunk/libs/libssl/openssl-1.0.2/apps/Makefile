@@ -168,3 +168,54 @@ progs.h: progs.pl
 	$(RM) $(PROGRAM).o
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+
+app_rand.o: ../e_os.h app_rand.c apps.h
+apps.o: ../e_os.h apps.c apps.h
+asn1pars.o: ../e_os.h apps.h asn1pars.c
+ca.o: ../e_os.h apps.h ca.c
+ciphers.o: ../e_os.h apps.h ciphers.c
+cms.o: ../e_os.h apps.h cms.c
+crl.o: ../e_os.h apps.h crl.c
+crl2p7.o: ../e_os.h apps.h crl2p7.c
+dgst.o: ../e_os.h apps.h dgst.c
+dh.o: ../e_os.h apps.h dh.c
+dsa.o: ../e_os.h apps.h dsa.c
+dsaparam.o: ../e_os.h apps.h dsaparam.c
+ec.o: ec.c
+ecparam.o: ecparam.c
+enc.o: ../e_os.h apps.h enc.c
+engine.o: ../e_os.h apps.h engine.c
+errstr.o: ../e_os.h apps.h errstr.c
+gendh.o: ../e_os.h apps.h gendh.c
+gendsa.o: ../e_os.h apps.h gendsa.c
+genpkey.o: ../e_os.h apps.h genpkey.c
+genrsa.o: ../e_os.h apps.h genrsa.c
+nseq.o: ../e_os.h apps.h nseq.c
+ocsp.o: ../e_os.h apps.h ocsp.c
+openssl.o: ../e_os.h apps.h openssl.c progs.h s_apps.h
+passwd.o: ../e_os.h apps.h passwd.c
+pkcs12.o: ../e_os.h apps.h pkcs12.c
+pkcs7.o: ../e_os.h apps.h pkcs7.c
+pkcs8.o: ../e_os.h apps.h pkcs8.c
+pkey.o: ../e_os.h apps.h pkey.c
+pkeyparam.o: ../e_os.h apps.h pkeyparam.c
+pkeyutl.o: ../e_os.h apps.h pkeyutl.c
+prime.o: ../e_os.h apps.h prime.c
+rand.o: ../e_os.h apps.h rand.c
+req.o: ../e_os.h apps.h req.c
+rsa.o: ../e_os.h apps.h rsa.c
+rsautl.o: ../e_os.h apps.h rsautl.c
+s_cb.o: ../e_os.h apps.h s_apps.h s_cb.c
+s_client.o: ../e_os.h apps.h s_apps.h s_client.c timeouts.h
+s_server.o: ../e_os.h apps.h s_apps.h s_server.c timeouts.h
+s_socket.o: ../e_os.h ../e_os2.h apps.h s_apps.h s_socket.c
+s_time.o: ../e_os.h apps.h s_apps.h s_time.c
+sess_id.o: ../e_os.h apps.h sess_id.c
+smime.o: ../e_os.h apps.h smime.c
+speed.o: speed.c
+spkac.o: ../e_os.h apps.h spkac.c
+srp.o: srp.c
+ts.o: ts.c
+verify.o: ../e_os.h apps.h verify.c
+version.o: ../e_os.h apps.h version.c
+x509.o: ../e_os.h apps.h x509.c

@@ -16,9 +16,6 @@ CMakeFiles/websockets.dir/lib/alloc.c.o: /opt/rt-n56u/trunk/stage/include/openss
 CMakeFiles/websockets.dir/lib/alloc.c.o: /opt/rt-n56u/trunk/stage/include/openssl/dtls1.h
 CMakeFiles/websockets.dir/lib/alloc.c.o: /opt/rt-n56u/trunk/stage/include/openssl/e_os2.h
 CMakeFiles/websockets.dir/lib/alloc.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ebcdic.h
-CMakeFiles/websockets.dir/lib/alloc.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ec.h
-CMakeFiles/websockets.dir/lib/alloc.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdh.h
-CMakeFiles/websockets.dir/lib/alloc.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdsa.h
 CMakeFiles/websockets.dir/lib/alloc.c.o: /opt/rt-n56u/trunk/stage/include/openssl/err.h
 CMakeFiles/websockets.dir/lib/alloc.c.o: /opt/rt-n56u/trunk/stage/include/openssl/evp.h
 CMakeFiles/websockets.dir/lib/alloc.c.o: /opt/rt-n56u/trunk/stage/include/openssl/hmac.h
@@ -67,9 +64,6 @@ CMakeFiles/websockets.dir/lib/base64-decode.c.o: /opt/rt-n56u/trunk/stage/includ
 CMakeFiles/websockets.dir/lib/base64-decode.c.o: /opt/rt-n56u/trunk/stage/include/openssl/dtls1.h
 CMakeFiles/websockets.dir/lib/base64-decode.c.o: /opt/rt-n56u/trunk/stage/include/openssl/e_os2.h
 CMakeFiles/websockets.dir/lib/base64-decode.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ebcdic.h
-CMakeFiles/websockets.dir/lib/base64-decode.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ec.h
-CMakeFiles/websockets.dir/lib/base64-decode.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdh.h
-CMakeFiles/websockets.dir/lib/base64-decode.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdsa.h
 CMakeFiles/websockets.dir/lib/base64-decode.c.o: /opt/rt-n56u/trunk/stage/include/openssl/err.h
 CMakeFiles/websockets.dir/lib/base64-decode.c.o: /opt/rt-n56u/trunk/stage/include/openssl/evp.h
 CMakeFiles/websockets.dir/lib/base64-decode.c.o: /opt/rt-n56u/trunk/stage/include/openssl/hmac.h
@@ -118,9 +112,6 @@ CMakeFiles/websockets.dir/lib/client-handshake.c.o: /opt/rt-n56u/trunk/stage/inc
 CMakeFiles/websockets.dir/lib/client-handshake.c.o: /opt/rt-n56u/trunk/stage/include/openssl/dtls1.h
 CMakeFiles/websockets.dir/lib/client-handshake.c.o: /opt/rt-n56u/trunk/stage/include/openssl/e_os2.h
 CMakeFiles/websockets.dir/lib/client-handshake.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ebcdic.h
-CMakeFiles/websockets.dir/lib/client-handshake.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ec.h
-CMakeFiles/websockets.dir/lib/client-handshake.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdh.h
-CMakeFiles/websockets.dir/lib/client-handshake.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdsa.h
 CMakeFiles/websockets.dir/lib/client-handshake.c.o: /opt/rt-n56u/trunk/stage/include/openssl/err.h
 CMakeFiles/websockets.dir/lib/client-handshake.c.o: /opt/rt-n56u/trunk/stage/include/openssl/evp.h
 CMakeFiles/websockets.dir/lib/client-handshake.c.o: /opt/rt-n56u/trunk/stage/include/openssl/hmac.h
@@ -169,9 +160,6 @@ CMakeFiles/websockets.dir/lib/client-parser.c.o: /opt/rt-n56u/trunk/stage/includ
 CMakeFiles/websockets.dir/lib/client-parser.c.o: /opt/rt-n56u/trunk/stage/include/openssl/dtls1.h
 CMakeFiles/websockets.dir/lib/client-parser.c.o: /opt/rt-n56u/trunk/stage/include/openssl/e_os2.h
 CMakeFiles/websockets.dir/lib/client-parser.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ebcdic.h
-CMakeFiles/websockets.dir/lib/client-parser.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ec.h
-CMakeFiles/websockets.dir/lib/client-parser.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdh.h
-CMakeFiles/websockets.dir/lib/client-parser.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdsa.h
 CMakeFiles/websockets.dir/lib/client-parser.c.o: /opt/rt-n56u/trunk/stage/include/openssl/err.h
 CMakeFiles/websockets.dir/lib/client-parser.c.o: /opt/rt-n56u/trunk/stage/include/openssl/evp.h
 CMakeFiles/websockets.dir/lib/client-parser.c.o: /opt/rt-n56u/trunk/stage/include/openssl/hmac.h
@@ -220,9 +208,6 @@ CMakeFiles/websockets.dir/lib/client.c.o: /opt/rt-n56u/trunk/stage/include/opens
 CMakeFiles/websockets.dir/lib/client.c.o: /opt/rt-n56u/trunk/stage/include/openssl/dtls1.h
 CMakeFiles/websockets.dir/lib/client.c.o: /opt/rt-n56u/trunk/stage/include/openssl/e_os2.h
 CMakeFiles/websockets.dir/lib/client.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ebcdic.h
-CMakeFiles/websockets.dir/lib/client.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ec.h
-CMakeFiles/websockets.dir/lib/client.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdh.h
-CMakeFiles/websockets.dir/lib/client.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdsa.h
 CMakeFiles/websockets.dir/lib/client.c.o: /opt/rt-n56u/trunk/stage/include/openssl/err.h
 CMakeFiles/websockets.dir/lib/client.c.o: /opt/rt-n56u/trunk/stage/include/openssl/evp.h
 CMakeFiles/websockets.dir/lib/client.c.o: /opt/rt-n56u/trunk/stage/include/openssl/hmac.h
@@ -271,9 +256,6 @@ CMakeFiles/websockets.dir/lib/context.c.o: /opt/rt-n56u/trunk/stage/include/open
 CMakeFiles/websockets.dir/lib/context.c.o: /opt/rt-n56u/trunk/stage/include/openssl/dtls1.h
 CMakeFiles/websockets.dir/lib/context.c.o: /opt/rt-n56u/trunk/stage/include/openssl/e_os2.h
 CMakeFiles/websockets.dir/lib/context.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ebcdic.h
-CMakeFiles/websockets.dir/lib/context.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ec.h
-CMakeFiles/websockets.dir/lib/context.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdh.h
-CMakeFiles/websockets.dir/lib/context.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdsa.h
 CMakeFiles/websockets.dir/lib/context.c.o: /opt/rt-n56u/trunk/stage/include/openssl/err.h
 CMakeFiles/websockets.dir/lib/context.c.o: /opt/rt-n56u/trunk/stage/include/openssl/evp.h
 CMakeFiles/websockets.dir/lib/context.c.o: /opt/rt-n56u/trunk/stage/include/openssl/hmac.h
@@ -323,9 +305,6 @@ CMakeFiles/websockets.dir/lib/extension-permessage-deflate.c.o: /opt/rt-n56u/tru
 CMakeFiles/websockets.dir/lib/extension-permessage-deflate.c.o: /opt/rt-n56u/trunk/stage/include/openssl/dtls1.h
 CMakeFiles/websockets.dir/lib/extension-permessage-deflate.c.o: /opt/rt-n56u/trunk/stage/include/openssl/e_os2.h
 CMakeFiles/websockets.dir/lib/extension-permessage-deflate.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ebcdic.h
-CMakeFiles/websockets.dir/lib/extension-permessage-deflate.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ec.h
-CMakeFiles/websockets.dir/lib/extension-permessage-deflate.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdh.h
-CMakeFiles/websockets.dir/lib/extension-permessage-deflate.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdsa.h
 CMakeFiles/websockets.dir/lib/extension-permessage-deflate.c.o: /opt/rt-n56u/trunk/stage/include/openssl/err.h
 CMakeFiles/websockets.dir/lib/extension-permessage-deflate.c.o: /opt/rt-n56u/trunk/stage/include/openssl/evp.h
 CMakeFiles/websockets.dir/lib/extension-permessage-deflate.c.o: /opt/rt-n56u/trunk/stage/include/openssl/hmac.h
@@ -377,9 +356,6 @@ CMakeFiles/websockets.dir/lib/extension.c.o: /opt/rt-n56u/trunk/stage/include/op
 CMakeFiles/websockets.dir/lib/extension.c.o: /opt/rt-n56u/trunk/stage/include/openssl/dtls1.h
 CMakeFiles/websockets.dir/lib/extension.c.o: /opt/rt-n56u/trunk/stage/include/openssl/e_os2.h
 CMakeFiles/websockets.dir/lib/extension.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ebcdic.h
-CMakeFiles/websockets.dir/lib/extension.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ec.h
-CMakeFiles/websockets.dir/lib/extension.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdh.h
-CMakeFiles/websockets.dir/lib/extension.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdsa.h
 CMakeFiles/websockets.dir/lib/extension.c.o: /opt/rt-n56u/trunk/stage/include/openssl/err.h
 CMakeFiles/websockets.dir/lib/extension.c.o: /opt/rt-n56u/trunk/stage/include/openssl/evp.h
 CMakeFiles/websockets.dir/lib/extension.c.o: /opt/rt-n56u/trunk/stage/include/openssl/hmac.h
@@ -430,9 +406,6 @@ CMakeFiles/websockets.dir/lib/handshake.c.o: /opt/rt-n56u/trunk/stage/include/op
 CMakeFiles/websockets.dir/lib/handshake.c.o: /opt/rt-n56u/trunk/stage/include/openssl/dtls1.h
 CMakeFiles/websockets.dir/lib/handshake.c.o: /opt/rt-n56u/trunk/stage/include/openssl/e_os2.h
 CMakeFiles/websockets.dir/lib/handshake.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ebcdic.h
-CMakeFiles/websockets.dir/lib/handshake.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ec.h
-CMakeFiles/websockets.dir/lib/handshake.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdh.h
-CMakeFiles/websockets.dir/lib/handshake.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdsa.h
 CMakeFiles/websockets.dir/lib/handshake.c.o: /opt/rt-n56u/trunk/stage/include/openssl/err.h
 CMakeFiles/websockets.dir/lib/handshake.c.o: /opt/rt-n56u/trunk/stage/include/openssl/evp.h
 CMakeFiles/websockets.dir/lib/handshake.c.o: /opt/rt-n56u/trunk/stage/include/openssl/hmac.h
@@ -482,9 +455,6 @@ CMakeFiles/websockets.dir/lib/header.c.o: /opt/rt-n56u/trunk/stage/include/opens
 CMakeFiles/websockets.dir/lib/header.c.o: /opt/rt-n56u/trunk/stage/include/openssl/dtls1.h
 CMakeFiles/websockets.dir/lib/header.c.o: /opt/rt-n56u/trunk/stage/include/openssl/e_os2.h
 CMakeFiles/websockets.dir/lib/header.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ebcdic.h
-CMakeFiles/websockets.dir/lib/header.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ec.h
-CMakeFiles/websockets.dir/lib/header.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdh.h
-CMakeFiles/websockets.dir/lib/header.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdsa.h
 CMakeFiles/websockets.dir/lib/header.c.o: /opt/rt-n56u/trunk/stage/include/openssl/err.h
 CMakeFiles/websockets.dir/lib/header.c.o: /opt/rt-n56u/trunk/stage/include/openssl/evp.h
 CMakeFiles/websockets.dir/lib/header.c.o: /opt/rt-n56u/trunk/stage/include/openssl/hmac.h
@@ -533,9 +503,6 @@ CMakeFiles/websockets.dir/lib/libwebsockets.c.o: /opt/rt-n56u/trunk/stage/includ
 CMakeFiles/websockets.dir/lib/libwebsockets.c.o: /opt/rt-n56u/trunk/stage/include/openssl/dtls1.h
 CMakeFiles/websockets.dir/lib/libwebsockets.c.o: /opt/rt-n56u/trunk/stage/include/openssl/e_os2.h
 CMakeFiles/websockets.dir/lib/libwebsockets.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ebcdic.h
-CMakeFiles/websockets.dir/lib/libwebsockets.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ec.h
-CMakeFiles/websockets.dir/lib/libwebsockets.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdh.h
-CMakeFiles/websockets.dir/lib/libwebsockets.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdsa.h
 CMakeFiles/websockets.dir/lib/libwebsockets.c.o: /opt/rt-n56u/trunk/stage/include/openssl/err.h
 CMakeFiles/websockets.dir/lib/libwebsockets.c.o: /opt/rt-n56u/trunk/stage/include/openssl/evp.h
 CMakeFiles/websockets.dir/lib/libwebsockets.c.o: /opt/rt-n56u/trunk/stage/include/openssl/hmac.h
@@ -584,9 +551,6 @@ CMakeFiles/websockets.dir/lib/lws-plat-unix.c.o: /opt/rt-n56u/trunk/stage/includ
 CMakeFiles/websockets.dir/lib/lws-plat-unix.c.o: /opt/rt-n56u/trunk/stage/include/openssl/dtls1.h
 CMakeFiles/websockets.dir/lib/lws-plat-unix.c.o: /opt/rt-n56u/trunk/stage/include/openssl/e_os2.h
 CMakeFiles/websockets.dir/lib/lws-plat-unix.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ebcdic.h
-CMakeFiles/websockets.dir/lib/lws-plat-unix.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ec.h
-CMakeFiles/websockets.dir/lib/lws-plat-unix.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdh.h
-CMakeFiles/websockets.dir/lib/lws-plat-unix.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdsa.h
 CMakeFiles/websockets.dir/lib/lws-plat-unix.c.o: /opt/rt-n56u/trunk/stage/include/openssl/err.h
 CMakeFiles/websockets.dir/lib/lws-plat-unix.c.o: /opt/rt-n56u/trunk/stage/include/openssl/evp.h
 CMakeFiles/websockets.dir/lib/lws-plat-unix.c.o: /opt/rt-n56u/trunk/stage/include/openssl/hmac.h
@@ -635,9 +599,6 @@ CMakeFiles/websockets.dir/lib/output.c.o: /opt/rt-n56u/trunk/stage/include/opens
 CMakeFiles/websockets.dir/lib/output.c.o: /opt/rt-n56u/trunk/stage/include/openssl/dtls1.h
 CMakeFiles/websockets.dir/lib/output.c.o: /opt/rt-n56u/trunk/stage/include/openssl/e_os2.h
 CMakeFiles/websockets.dir/lib/output.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ebcdic.h
-CMakeFiles/websockets.dir/lib/output.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ec.h
-CMakeFiles/websockets.dir/lib/output.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdh.h
-CMakeFiles/websockets.dir/lib/output.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdsa.h
 CMakeFiles/websockets.dir/lib/output.c.o: /opt/rt-n56u/trunk/stage/include/openssl/err.h
 CMakeFiles/websockets.dir/lib/output.c.o: /opt/rt-n56u/trunk/stage/include/openssl/evp.h
 CMakeFiles/websockets.dir/lib/output.c.o: /opt/rt-n56u/trunk/stage/include/openssl/hmac.h
@@ -687,9 +648,6 @@ CMakeFiles/websockets.dir/lib/parsers.c.o: /opt/rt-n56u/trunk/stage/include/open
 CMakeFiles/websockets.dir/lib/parsers.c.o: /opt/rt-n56u/trunk/stage/include/openssl/dtls1.h
 CMakeFiles/websockets.dir/lib/parsers.c.o: /opt/rt-n56u/trunk/stage/include/openssl/e_os2.h
 CMakeFiles/websockets.dir/lib/parsers.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ebcdic.h
-CMakeFiles/websockets.dir/lib/parsers.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ec.h
-CMakeFiles/websockets.dir/lib/parsers.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdh.h
-CMakeFiles/websockets.dir/lib/parsers.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdsa.h
 CMakeFiles/websockets.dir/lib/parsers.c.o: /opt/rt-n56u/trunk/stage/include/openssl/err.h
 CMakeFiles/websockets.dir/lib/parsers.c.o: /opt/rt-n56u/trunk/stage/include/openssl/evp.h
 CMakeFiles/websockets.dir/lib/parsers.c.o: /opt/rt-n56u/trunk/stage/include/openssl/hmac.h
@@ -738,9 +696,6 @@ CMakeFiles/websockets.dir/lib/pollfd.c.o: /opt/rt-n56u/trunk/stage/include/opens
 CMakeFiles/websockets.dir/lib/pollfd.c.o: /opt/rt-n56u/trunk/stage/include/openssl/dtls1.h
 CMakeFiles/websockets.dir/lib/pollfd.c.o: /opt/rt-n56u/trunk/stage/include/openssl/e_os2.h
 CMakeFiles/websockets.dir/lib/pollfd.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ebcdic.h
-CMakeFiles/websockets.dir/lib/pollfd.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ec.h
-CMakeFiles/websockets.dir/lib/pollfd.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdh.h
-CMakeFiles/websockets.dir/lib/pollfd.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdsa.h
 CMakeFiles/websockets.dir/lib/pollfd.c.o: /opt/rt-n56u/trunk/stage/include/openssl/err.h
 CMakeFiles/websockets.dir/lib/pollfd.c.o: /opt/rt-n56u/trunk/stage/include/openssl/evp.h
 CMakeFiles/websockets.dir/lib/pollfd.c.o: /opt/rt-n56u/trunk/stage/include/openssl/hmac.h
@@ -789,9 +744,6 @@ CMakeFiles/websockets.dir/lib/server-handshake.c.o: /opt/rt-n56u/trunk/stage/inc
 CMakeFiles/websockets.dir/lib/server-handshake.c.o: /opt/rt-n56u/trunk/stage/include/openssl/dtls1.h
 CMakeFiles/websockets.dir/lib/server-handshake.c.o: /opt/rt-n56u/trunk/stage/include/openssl/e_os2.h
 CMakeFiles/websockets.dir/lib/server-handshake.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ebcdic.h
-CMakeFiles/websockets.dir/lib/server-handshake.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ec.h
-CMakeFiles/websockets.dir/lib/server-handshake.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdh.h
-CMakeFiles/websockets.dir/lib/server-handshake.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdsa.h
 CMakeFiles/websockets.dir/lib/server-handshake.c.o: /opt/rt-n56u/trunk/stage/include/openssl/err.h
 CMakeFiles/websockets.dir/lib/server-handshake.c.o: /opt/rt-n56u/trunk/stage/include/openssl/evp.h
 CMakeFiles/websockets.dir/lib/server-handshake.c.o: /opt/rt-n56u/trunk/stage/include/openssl/hmac.h
@@ -840,9 +792,6 @@ CMakeFiles/websockets.dir/lib/server.c.o: /opt/rt-n56u/trunk/stage/include/opens
 CMakeFiles/websockets.dir/lib/server.c.o: /opt/rt-n56u/trunk/stage/include/openssl/dtls1.h
 CMakeFiles/websockets.dir/lib/server.c.o: /opt/rt-n56u/trunk/stage/include/openssl/e_os2.h
 CMakeFiles/websockets.dir/lib/server.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ebcdic.h
-CMakeFiles/websockets.dir/lib/server.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ec.h
-CMakeFiles/websockets.dir/lib/server.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdh.h
-CMakeFiles/websockets.dir/lib/server.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdsa.h
 CMakeFiles/websockets.dir/lib/server.c.o: /opt/rt-n56u/trunk/stage/include/openssl/err.h
 CMakeFiles/websockets.dir/lib/server.c.o: /opt/rt-n56u/trunk/stage/include/openssl/evp.h
 CMakeFiles/websockets.dir/lib/server.c.o: /opt/rt-n56u/trunk/stage/include/openssl/hmac.h
@@ -891,9 +840,6 @@ CMakeFiles/websockets.dir/lib/service.c.o: /opt/rt-n56u/trunk/stage/include/open
 CMakeFiles/websockets.dir/lib/service.c.o: /opt/rt-n56u/trunk/stage/include/openssl/dtls1.h
 CMakeFiles/websockets.dir/lib/service.c.o: /opt/rt-n56u/trunk/stage/include/openssl/e_os2.h
 CMakeFiles/websockets.dir/lib/service.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ebcdic.h
-CMakeFiles/websockets.dir/lib/service.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ec.h
-CMakeFiles/websockets.dir/lib/service.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdh.h
-CMakeFiles/websockets.dir/lib/service.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdsa.h
 CMakeFiles/websockets.dir/lib/service.c.o: /opt/rt-n56u/trunk/stage/include/openssl/err.h
 CMakeFiles/websockets.dir/lib/service.c.o: /opt/rt-n56u/trunk/stage/include/openssl/evp.h
 CMakeFiles/websockets.dir/lib/service.c.o: /opt/rt-n56u/trunk/stage/include/openssl/hmac.h
@@ -942,9 +888,6 @@ CMakeFiles/websockets.dir/lib/sha-1.c.o: /opt/rt-n56u/trunk/stage/include/openss
 CMakeFiles/websockets.dir/lib/sha-1.c.o: /opt/rt-n56u/trunk/stage/include/openssl/dtls1.h
 CMakeFiles/websockets.dir/lib/sha-1.c.o: /opt/rt-n56u/trunk/stage/include/openssl/e_os2.h
 CMakeFiles/websockets.dir/lib/sha-1.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ebcdic.h
-CMakeFiles/websockets.dir/lib/sha-1.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ec.h
-CMakeFiles/websockets.dir/lib/sha-1.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdh.h
-CMakeFiles/websockets.dir/lib/sha-1.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdsa.h
 CMakeFiles/websockets.dir/lib/sha-1.c.o: /opt/rt-n56u/trunk/stage/include/openssl/err.h
 CMakeFiles/websockets.dir/lib/sha-1.c.o: /opt/rt-n56u/trunk/stage/include/openssl/evp.h
 CMakeFiles/websockets.dir/lib/sha-1.c.o: /opt/rt-n56u/trunk/stage/include/openssl/hmac.h
@@ -993,9 +936,6 @@ CMakeFiles/websockets.dir/lib/ssl-client.c.o: /opt/rt-n56u/trunk/stage/include/o
 CMakeFiles/websockets.dir/lib/ssl-client.c.o: /opt/rt-n56u/trunk/stage/include/openssl/dtls1.h
 CMakeFiles/websockets.dir/lib/ssl-client.c.o: /opt/rt-n56u/trunk/stage/include/openssl/e_os2.h
 CMakeFiles/websockets.dir/lib/ssl-client.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ebcdic.h
-CMakeFiles/websockets.dir/lib/ssl-client.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ec.h
-CMakeFiles/websockets.dir/lib/ssl-client.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdh.h
-CMakeFiles/websockets.dir/lib/ssl-client.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdsa.h
 CMakeFiles/websockets.dir/lib/ssl-client.c.o: /opt/rt-n56u/trunk/stage/include/openssl/err.h
 CMakeFiles/websockets.dir/lib/ssl-client.c.o: /opt/rt-n56u/trunk/stage/include/openssl/evp.h
 CMakeFiles/websockets.dir/lib/ssl-client.c.o: /opt/rt-n56u/trunk/stage/include/openssl/hmac.h
@@ -1044,9 +984,6 @@ CMakeFiles/websockets.dir/lib/ssl-server.c.o: /opt/rt-n56u/trunk/stage/include/o
 CMakeFiles/websockets.dir/lib/ssl-server.c.o: /opt/rt-n56u/trunk/stage/include/openssl/dtls1.h
 CMakeFiles/websockets.dir/lib/ssl-server.c.o: /opt/rt-n56u/trunk/stage/include/openssl/e_os2.h
 CMakeFiles/websockets.dir/lib/ssl-server.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ebcdic.h
-CMakeFiles/websockets.dir/lib/ssl-server.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ec.h
-CMakeFiles/websockets.dir/lib/ssl-server.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdh.h
-CMakeFiles/websockets.dir/lib/ssl-server.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdsa.h
 CMakeFiles/websockets.dir/lib/ssl-server.c.o: /opt/rt-n56u/trunk/stage/include/openssl/err.h
 CMakeFiles/websockets.dir/lib/ssl-server.c.o: /opt/rt-n56u/trunk/stage/include/openssl/evp.h
 CMakeFiles/websockets.dir/lib/ssl-server.c.o: /opt/rt-n56u/trunk/stage/include/openssl/hmac.h
@@ -1095,9 +1032,6 @@ CMakeFiles/websockets.dir/lib/ssl.c.o: /opt/rt-n56u/trunk/stage/include/openssl/
 CMakeFiles/websockets.dir/lib/ssl.c.o: /opt/rt-n56u/trunk/stage/include/openssl/dtls1.h
 CMakeFiles/websockets.dir/lib/ssl.c.o: /opt/rt-n56u/trunk/stage/include/openssl/e_os2.h
 CMakeFiles/websockets.dir/lib/ssl.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ebcdic.h
-CMakeFiles/websockets.dir/lib/ssl.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ec.h
-CMakeFiles/websockets.dir/lib/ssl.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdh.h
-CMakeFiles/websockets.dir/lib/ssl.c.o: /opt/rt-n56u/trunk/stage/include/openssl/ecdsa.h
 CMakeFiles/websockets.dir/lib/ssl.c.o: /opt/rt-n56u/trunk/stage/include/openssl/err.h
 CMakeFiles/websockets.dir/lib/ssl.c.o: /opt/rt-n56u/trunk/stage/include/openssl/evp.h
 CMakeFiles/websockets.dir/lib/ssl.c.o: /opt/rt-n56u/trunk/stage/include/openssl/hmac.h

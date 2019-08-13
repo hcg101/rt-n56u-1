@@ -87,3 +87,23 @@ clean:
 	rm -f *.o *.obj lib tags core .pure .nfs* *.old *.bak fluff
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+
+b_dump.o: ../../e_os.h ../cryptlib.h b_dump.c bio_lcl.h
+b_print.o: ../../e_os.h ../cryptlib.h b_print.c
+b_sock.o: ../../e_os.h ../cryptlib.h b_sock.c
+bf_buff.o: ../../e_os.h ../cryptlib.h bf_buff.c
+bf_nbio.o: ../../e_os.h ../cryptlib.h bf_nbio.c
+bf_null.o: ../../e_os.h ../cryptlib.h bf_null.c
+bio_cb.o: ../../e_os.h ../cryptlib.h bio_cb.c
+bio_err.o: bio_err.c
+bio_lib.o: ../../e_os.h ../cryptlib.h bio_lib.c
+bss_acpt.o: ../../e_os.h ../cryptlib.h bss_acpt.c
+bss_bio.o: ../../e_os.h bss_bio.c
+bss_conn.o: ../../e_os.h ../cryptlib.h bss_conn.c
+bss_dgram.o: ../../e_os.h ../cryptlib.h bss_dgram.c
+bss_fd.o: ../../e_os.h ../cryptlib.h bio_lcl.h bss_fd.c
+bss_file.o: ../../e_os.h ../cryptlib.h bio_lcl.h bss_file.c
+bss_log.o: ../../e_os.h ../cryptlib.h bss_log.c
+bss_mem.o: ../../e_os.h ../cryptlib.h bss_mem.c
+bss_null.o: ../../e_os.h ../cryptlib.h bss_null.c
+bss_sock.o: ../../e_os.h ../cryptlib.h bss_sock.c

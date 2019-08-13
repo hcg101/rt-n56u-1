@@ -78,3 +78,13 @@ clean:
 	rm -f *.o *.obj lib tags core .pure .nfs* *.old *.bak fluff
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+
+ocsp_asn.o: ocsp_asn.c
+ocsp_cl.o: ../../e_os.h ../cryptlib.h ocsp_cl.c
+ocsp_err.o: ocsp_err.c
+ocsp_ext.o: ../../e_os.h ../cryptlib.h ocsp_ext.c
+ocsp_ht.o: ../../e_os.h ocsp_ht.c
+ocsp_lib.o: ../../e_os.h ../cryptlib.h ocsp_lib.c
+ocsp_prn.o: ocsp_prn.c
+ocsp_srv.o: ../../e_os.h ../cryptlib.h ocsp_srv.c
+ocsp_vfy.o: ocsp_vfy.c

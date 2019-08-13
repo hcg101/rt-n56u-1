@@ -512,7 +512,7 @@ int start_services_once(int is_ap_mode);
 void stop_services(int stopall);
 void stop_services_lan_wan(void);
 void stop_misc(void);
-<<<<<<< HEAD
+
 #if defined(APP_WIFIDOG)
 int is_wifidog_run(void);
 void stop_wifidog(void);
@@ -525,6 +525,7 @@ int is_ngrok_run(void);
 void stop_ngrok(void);
 void run_ngrok(void);
 void restart_ngrok(void);
+#endif
 
 #if defined(APP_SCUT)
 int is_scutclient_run(void);

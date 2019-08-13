@@ -79,3 +79,9 @@ clean:
 	rm -f *.o */*.o *.obj lib tags core .pure .nfs* *.old *.bak fluff
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+
+ui_compat.o: ui_compat.c
+ui_err.o: ui_err.c
+ui_lib.o: ../../e_os.h ../cryptlib.h ui_lib.c ui_locl.h
+ui_openssl.o: ../../e_os.h ../cryptlib.h ui_locl.h ui_openssl.c
+ui_util.o: ui_locl.h ui_util.c

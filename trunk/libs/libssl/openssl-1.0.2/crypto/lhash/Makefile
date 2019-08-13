@@ -75,3 +75,6 @@ clean:
 	rm -f *.o *.obj lib tags core .pure .nfs* *.old *.bak fluff
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+
+lh_stats.o: ../../e_os.h ../cryptlib.h lh_stats.c
+lhash.o: lhash.c

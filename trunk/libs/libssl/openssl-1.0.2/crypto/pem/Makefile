@@ -78,3 +78,16 @@ clean:
 	rm -f *.o *.obj lib tags core .pure .nfs* *.old *.bak fluff
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+
+pem_all.o: ../../e_os.h ../cryptlib.h pem_all.c
+pem_err.o: pem_err.c
+pem_info.o: ../../e_os.h ../cryptlib.h pem_info.c
+pem_lib.o: ../../e_os.h ../asn1/asn1_locl.h ../cryptlib.h pem_lib.c
+pem_oth.o: ../../e_os.h ../cryptlib.h pem_oth.c
+pem_pk8.o: ../../e_os.h ../cryptlib.h pem_pk8.c
+pem_pkey.o: ../../e_os.h ../asn1/asn1_locl.h ../cryptlib.h pem_pkey.c
+pem_seal.o: ../../e_os.h ../cryptlib.h pem_seal.c
+pem_sign.o: ../../e_os.h ../cryptlib.h pem_sign.c
+pem_x509.o: ../../e_os.h ../cryptlib.h pem_x509.c
+pem_xaux.o: ../../e_os.h ../cryptlib.h pem_xaux.c
+pvkfmt.o: ../../e_os.h ../cryptlib.h pvkfmt.c

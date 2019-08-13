@@ -136,3 +136,13 @@ clean:
 	rm -f *.s *.S *.o *.obj lib tags core .pure .nfs* *.old *.bak fluff
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+
+aes_cbc.o: aes_cbc.c
+aes_cfb.o: aes_cfb.c
+aes_core.o: aes_core.c aes_locl.h
+aes_ctr.o: aes_ctr.c
+aes_ecb.o: aes_ecb.c aes_locl.h
+aes_ige.o: ../../e_os.h ../cryptlib.h aes_ige.c aes_locl.h
+aes_misc.o: aes_locl.h aes_misc.c
+aes_ofb.o: aes_ofb.c
+aes_wrap.o: ../../e_os.h ../cryptlib.h aes_wrap.c

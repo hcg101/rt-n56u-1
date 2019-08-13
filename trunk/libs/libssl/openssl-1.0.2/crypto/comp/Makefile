@@ -78,3 +78,8 @@ clean:
 	rm -f *.o *.obj lib tags core .pure .nfs* *.old *.bak fluff
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+
+c_rle.o: c_rle.c
+c_zlib.o: c_zlib.c
+comp_err.o: comp_err.c
+comp_lib.o: comp_lib.c

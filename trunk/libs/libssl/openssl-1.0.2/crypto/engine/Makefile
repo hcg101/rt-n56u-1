@@ -85,3 +85,30 @@ clean:
 	rm -f *.o */*.o *.obj lib tags core .pure .nfs* *.old *.bak fluff
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+
+eng_all.o: ../../e_os.h ../cryptlib.h eng_all.c eng_int.h
+eng_cnf.o: ../../e_os.h ../cryptlib.h eng_cnf.c eng_int.h
+eng_cryptodev.o: eng_cryptodev.c
+eng_ctrl.o: ../../e_os.h ../cryptlib.h eng_ctrl.c eng_int.h
+eng_dyn.o: ../../e_os.h ../cryptlib.h eng_dyn.c eng_int.h
+eng_err.o: eng_err.c
+eng_fat.o: ../../e_os.h ../cryptlib.h eng_fat.c eng_int.h
+eng_init.o: ../../e_os.h ../cryptlib.h eng_init.c eng_int.h
+eng_lib.o: ../../e_os.h ../cryptlib.h eng_int.h eng_lib.c
+eng_list.o: ../../e_os.h ../cryptlib.h eng_int.h eng_list.c
+eng_openssl.o: ../../e_os.h ../cryptlib.h eng_openssl.c
+eng_pkey.o: ../../e_os.h ../cryptlib.h eng_int.h eng_pkey.c
+eng_rdrand.o: eng_rdrand.c
+eng_table.o: ../../e_os.h ../cryptlib.h eng_int.h eng_table.c
+tb_asnmth.o: ../../e_os.h ../asn1/asn1_locl.h ../cryptlib.h eng_int.h
+tb_asnmth.o: tb_asnmth.c
+tb_cipher.o: ../../e_os.h ../cryptlib.h eng_int.h tb_cipher.c
+tb_dh.o: ../../e_os.h ../cryptlib.h eng_int.h tb_dh.c
+tb_digest.o: ../../e_os.h ../cryptlib.h eng_int.h tb_digest.c
+tb_dsa.o: ../../e_os.h ../cryptlib.h eng_int.h tb_dsa.c
+tb_ecdh.o: ../../e_os.h ../cryptlib.h eng_int.h tb_ecdh.c
+tb_ecdsa.o: ../../e_os.h ../cryptlib.h eng_int.h tb_ecdsa.c
+tb_pkmeth.o: ../../e_os.h ../cryptlib.h eng_int.h tb_pkmeth.c
+tb_rand.o: ../../e_os.h ../cryptlib.h eng_int.h tb_rand.c
+tb_rsa.o: ../../e_os.h ../cryptlib.h eng_int.h tb_rsa.c
+tb_store.o: ../../e_os.h ../cryptlib.h eng_int.h tb_store.c

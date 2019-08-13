@@ -78,3 +78,11 @@ clean:
 	rm -f *.o *.obj lib tags core .pure .nfs* *.old *.bak fluff
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+
+conf_api.o: ../../e_os.h ../cryptlib.h conf_api.c
+conf_def.o: ../../e_os.h ../cryptlib.h conf_def.c conf_def.h
+conf_err.o: conf_err.c
+conf_lib.o: conf_lib.c
+conf_mall.o: ../../e_os.h ../cryptlib.h conf_mall.c
+conf_mod.o: ../../e_os.h ../cryptlib.h conf_mod.c
+conf_sap.o: ../../e_os.h ../cryptlib.h conf_sap.c

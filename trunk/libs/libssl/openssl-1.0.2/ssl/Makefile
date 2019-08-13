@@ -106,3 +106,55 @@ clean:
 	rm -f *.o *.obj lib tags core .pure .nfs* *.old *.bak fluff
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+
+bio_ssl.o: bio_ssl.c
+d1_both.o: ../e_os.h d1_both.c ssl_locl.h
+d1_clnt.o: ../e_os.h d1_clnt.c kssl_lcl.h ssl_locl.h
+d1_lib.o: ../e_os.h d1_lib.c ssl_locl.h
+d1_meth.o: ../e_os.h d1_meth.c ssl_locl.h
+d1_pkt.o: ../e_os.h d1_pkt.c ssl_locl.h
+d1_srtp.o: ../e_os.h d1_srtp.c srtp.h ssl_locl.h
+d1_srvr.o: ../e_os.h d1_srvr.c ssl_locl.h
+kssl.o: ../crypto/o_time.h kssl.c kssl_lcl.h
+s23_clnt.o: ../e_os.h s23_clnt.c ssl_locl.h
+s23_lib.o: ../e_os.h s23_lib.c ssl_locl.h
+s23_meth.o: ../e_os.h s23_meth.c ssl_locl.h
+s23_pkt.o: ../e_os.h s23_pkt.c ssl_locl.h
+s23_srvr.o: ../e_os.h s23_srvr.c ssl_locl.h
+s2_clnt.o: ../e_os.h s2_clnt.c ssl_locl.h
+s2_enc.o: ../e_os.h s2_enc.c ssl_locl.h
+s2_lib.o: ../e_os.h s2_lib.c ssl_locl.h
+s2_meth.o: ../e_os.h s2_meth.c ssl_locl.h
+s2_pkt.o: ../e_os.h s2_pkt.c ssl_locl.h
+s2_srvr.o: ../e_os.h s2_srvr.c ssl_locl.h
+s3_both.o: ../e_os.h s3_both.c ssl_locl.h
+s3_cbc.o: ../crypto/constant_time_locl.h ../e_os.h s3_cbc.c ssl_locl.h
+s3_clnt.o: ../e_os.h kssl_lcl.h s3_clnt.c ssl_locl.h
+s3_enc.o: ../e_os.h s3_enc.c ssl_locl.h
+s3_lib.o: ../e_os.h kssl_lcl.h s3_lib.c ssl_locl.h
+s3_meth.o: ../e_os.h s3_meth.c ssl_locl.h
+s3_pkt.o: ../e_os.h s3_pkt.c ssl_locl.h
+s3_srvr.o: ../crypto/constant_time_locl.h ../e_os.h kssl_lcl.h s3_srvr.c
+s3_srvr.o: ssl_locl.h
+ssl_algs.o: ../e_os.h ssl_algs.c ssl_locl.h
+ssl_asn1.o: ../e_os.h ssl_asn1.c ssl_locl.h
+ssl_cert.o: ../crypto/o_dir.h ../e_os.h ssl_cert.c ssl_locl.h
+ssl_ciph.o: ../e_os.h ssl_ciph.c ssl_locl.h
+ssl_conf.o: ../e_os.h ssl_conf.c ssl_locl.h
+ssl_err.o: ssl_err.c
+ssl_err2.o: ssl_err2.c
+ssl_lib.o: ../e_os.h kssl_lcl.h ssl_lib.c ssl_locl.h
+ssl_rsa.o: ../e_os.h ssl_locl.h ssl_rsa.c
+ssl_sess.o: ../e_os.h ssl_locl.h ssl_sess.c
+ssl_stat.o: ../e_os.h ssl_locl.h ssl_stat.c
+ssl_txt.o: ../e_os.h ssl_locl.h ssl_txt.c
+ssl_utst.o: ../e_os.h ssl_locl.h ssl_utst.c
+t1_clnt.o: ../e_os.h ssl_locl.h t1_clnt.c
+t1_enc.o: ../e_os.h ssl_locl.h t1_enc.c
+t1_ext.o: ../e_os.h ssl_locl.h t1_ext.c
+t1_lib.o: ../e_os.h ssl_locl.h t1_lib.c
+t1_meth.o: ../e_os.h ssl_locl.h t1_meth.c
+t1_reneg.o: ../e_os.h ssl_locl.h t1_reneg.c
+t1_srvr.o: ../e_os.h ssl_locl.h t1_srvr.c
+t1_trce.o: ../e_os.h ssl_locl.h t1_trce.c
+tls_srp.o: ../e_os.h ssl_locl.h tls_srp.c

@@ -82,3 +82,12 @@ clean:
 	rm -f *.o *.obj lib tags core .pure .nfs* *.old *.bak fluff enc dec sign verify
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+
+bio_pk7.o: bio_pk7.c
+pk7_asn1.o: ../../e_os.h ../cryptlib.h pk7_asn1.c
+pk7_attr.o: pk7_attr.c
+pk7_doit.o: ../../e_os.h ../cryptlib.h pk7_doit.c
+pk7_lib.o: ../../e_os.h ../asn1/asn1_locl.h ../cryptlib.h pk7_lib.c
+pk7_mime.o: ../../e_os.h ../cryptlib.h pk7_mime.c
+pk7_smime.o: ../../e_os.h ../cryptlib.h pk7_smime.c
+pkcs7err.o: pkcs7err.c

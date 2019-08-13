@@ -75,3 +75,7 @@ clean:
 	rm -f *.o *.obj lib tags core .pure .nfs* *.old *.bak fluff
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+
+hm_ameth.o: ../../e_os.h ../asn1/asn1_locl.h ../cryptlib.h hm_ameth.c
+hm_pmeth.o: ../../e_os.h ../cryptlib.h ../evp/evp_locl.h hm_pmeth.c
+hmac.o: ../../e_os.h ../cryptlib.h hmac.c

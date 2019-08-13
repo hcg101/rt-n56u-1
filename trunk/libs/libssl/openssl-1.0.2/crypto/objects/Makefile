@@ -88,3 +88,9 @@ clean:
 	rm -f *.o *.obj lib tags core .pure .nfs* *.old *.bak fluff
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+
+o_names.o: o_names.c
+obj_dat.o: ../../e_os.h ../cryptlib.h obj_dat.c obj_dat.h
+obj_err.o: obj_err.c
+obj_lib.o: ../../e_os.h ../cryptlib.h obj_lib.c
+obj_xref.o: obj_xref.c obj_xref.h

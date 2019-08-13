@@ -77,3 +77,16 @@ clean:
 	rm -f *.o */*.o *.obj lib tags core .pure .nfs* *.old *.bak fluff
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+
+dh_ameth.o: ../../e_os.h ../asn1/asn1_locl.h ../cryptlib.h dh_ameth.c
+dh_asn1.o: ../../e_os.h ../cryptlib.h dh_asn1.c
+dh_check.o: ../../e_os.h ../cryptlib.h dh_check.c
+dh_depr.o: ../../e_os.h ../cryptlib.h dh_depr.c
+dh_err.o: dh_err.c
+dh_gen.o: ../../e_os.h ../cryptlib.h dh_gen.c
+dh_kdf.o: ../../e_os.h dh_kdf.c
+dh_key.o: ../../e_os.h ../cryptlib.h dh_key.c
+dh_lib.o: ../../e_os.h ../cryptlib.h dh_lib.c
+dh_pmeth.o: ../../e_os.h ../cryptlib.h ../evp/evp_locl.h dh_pmeth.c
+dh_prn.o: ../../e_os.h ../cryptlib.h dh_prn.c
+dh_rfc5114.o: ../../e_os.h ../cryptlib.h dh_rfc5114.c

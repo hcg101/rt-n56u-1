@@ -85,3 +85,28 @@ clean:
 	rm -f *.o *.obj lib tags core .pure .nfs* *.old *.bak fluff
 
 # DO NOT DELETE THIS LINE -- make depend depends on it.
+
+by_dir.o: ../../e_os.h ../cryptlib.h by_dir.c
+by_file.o: ../../e_os.h ../cryptlib.h by_file.c
+x509_att.o: ../../e_os.h ../cryptlib.h x509_att.c
+x509_cmp.o: ../../e_os.h ../cryptlib.h x509_cmp.c
+x509_d2.o: ../../e_os.h ../cryptlib.h x509_d2.c
+x509_def.o: ../../e_os.h ../cryptlib.h x509_def.c
+x509_err.o: x509_err.c
+x509_ext.o: ../../e_os.h ../cryptlib.h x509_ext.c
+x509_lu.o: ../../e_os.h ../cryptlib.h x509_lu.c
+x509_obj.o: ../../e_os.h ../cryptlib.h x509_obj.c
+x509_r2x.o: ../../e_os.h ../cryptlib.h x509_r2x.c
+x509_req.o: ../../e_os.h ../cryptlib.h x509_req.c
+x509_set.o: ../../e_os.h ../cryptlib.h x509_set.c
+x509_trs.o: ../../e_os.h ../cryptlib.h x509_trs.c
+x509_txt.o: ../../e_os.h ../cryptlib.h x509_txt.c
+x509_v3.o: ../../e_os.h ../cryptlib.h x509_v3.c
+x509_vfy.o: ../../e_os.h ../cryptlib.h vpm_int.h x509_vfy.c
+x509_vpm.o: ../../e_os.h ../cryptlib.h vpm_int.h x509_vpm.c
+x509cset.o: ../../e_os.h ../cryptlib.h x509cset.c
+x509name.o: ../../e_os.h ../cryptlib.h x509name.c
+x509rset.o: ../../e_os.h ../cryptlib.h x509rset.c
+x509spki.o: ../../e_os.h ../cryptlib.h x509spki.c
+x509type.o: ../../e_os.h ../cryptlib.h x509type.c
+x_all.o: ../../e_os.h ../cryptlib.h x_all.c
