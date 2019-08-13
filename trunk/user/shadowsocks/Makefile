@@ -98,12 +98,14 @@ clean_ssr:
 	( if [ -f $(SRC_SSR_NAME)/Makefile ] ; then \
 		$(MAKE) -C $(SRC_SSR_NAME) clean ; \
 	fi )
+	rm -rf shadowsocksr-libev-master/
 
 clean_ss:
 	( if [ -f $(SRC_SS_NAME)/Makefile ] ; then \
 		$(MAKE) -C $(SRC_SS_NAME) distclean ; \
 	fi )
-
+	
+	rm -rf shadowsocks-libev-3.2.5/
 romfs:
 ifeq ($(CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS),y)
 	chmod -R +x scripts/

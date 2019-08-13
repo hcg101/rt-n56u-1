@@ -1,8 +1,8 @@
 ##################################################################
 # Board PID # Board Name       # PRODUCT # Note
 ##################################################################
-# PSG1218   # PHICOMM PSG1218  # MT7620  #
+# NEWIFI-MINI # Lenovo NEWIFI-MINI # MT7620  #
 ##################################################################
 
-CFLAGS += -DBOARD_PSG1218
-BOARD_NUM_USB_PORTS=0
+CFLAGS += -DBOARD_NEWIFIMINI
+BOARD_NUM_USB_PORTS=1

@@ -14,4 +14,5 @@ romfs:
 	$(ROMFSINST) -d $(THISDIR)/chnroute.bz2 /etc_ro/chnroute.bz2
 
 clean :
-	rm -f chnroute.*
+	sleep 1
+	#rm -f chnroute.*

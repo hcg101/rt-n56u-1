@@ -233,6 +233,49 @@ restart_sshd(void)
 }
 #endif
 
+#if defined(APP_SCUT)
+int is_scutclient_run(void)
+{
+	if(pids("bin_scutclient"))
+		return 1;
+	return 0;
+}
+void stop_scutclient(void)
+{
+	eval("/usr/bin/scutclient.sh","stop");
+}
+
+void start_scutclient(void)
+{
+	int scutclient_mode = nvram_get_int("scutclient_enable");
+	if (scutclient_mode == 1)
+		eval("/usr/bin/scutclient.sh","start");
+}
+
+void restart_scutclient(void)
+{
+	stop_scutclient();
+	start_scutclient();
+}
+
+#endif
+
+#if defined(APP_TTYD)
+void stop_ttyd(void){
+	eval("/usr/bin/ttyd.sh","stop");
+}
+
+void start_ttyd(void){
+	int ttyd_mode = nvram_get_int("ttyd_enable");
+	if ( ttyd_mode == 1)
+		eval("/usr/bin/ttyd.sh","start");
+}
+
+void restart_ttyd(void){
+	stop_ttyd();
+	start_ttyd();
+}
+#endif
 
 #if defined(APP_WIFIDOG)
 int
@@ -313,50 +356,9 @@ restart_ngrok(void)
 	start_ngrok();
 
 	is_run_after = is_ngrok_run();
-#endif
-#if defined(APP_SCUT)
-int is_scutclient_run(void)
-{
-	if(pids("bin_scutclient"))
-		return 1;
-	return 0;
-}
-void stop_scutclient(void)
-{
-	eval("/usr/bin/scutclient.sh","stop");
-}
-
-void start_scutclient(void)
-{
-	int scutclient_mode = nvram_get_int("scutclient_enable");
-	if (scutclient_mode == 1)
-		eval("/usr/bin/scutclient.sh","start");
-}
-
-void restart_scutclient(void)
-{
-	stop_scutclient();
-	start_scutclient();
-}
-
-#endif
-
-#if defined(APP_TTYD)
-void stop_ttyd(void){
-	eval("/usr/bin/ttyd.sh","stop");
-}
-
-void start_ttyd(void){
-	int ttyd_mode = nvram_get_int("ttyd_enable");
-	if ( ttyd_mode == 1)
-		eval("/usr/bin/ttyd.sh","start");
-}
-
-void restart_ttyd(void){
-	stop_ttyd();
-	start_ttyd();
 }
 #endif
+
 
 #if defined(APP_SHADOWSOCKS)
 void stop_ss(void){
@@ -447,7 +449,6 @@ void start_napt66(void){
 		else
 			logmessage("napt66","Invalid wan6 ifname!");
 	}
-
 }
 #endif
 
@@ -630,10 +631,6 @@ start_services_once(int is_ap_mode)
 #if defined(APP_SSHD)
 	start_sshd();
 #endif
-
-#if defined(APP_WIFIDOG)
-	start_wifidog();
-#endif
 	start_vpn_server();
 	start_watchdog();
 	start_infosvr();
@@ -666,6 +663,12 @@ start_services_once(int is_ap_mode)
 #if defined(APP_TTYD)
 	start_ttyd();
 #endif
+#if defined(APP_NGROK)
+	start_ngrok();
+#endif
+#if defined(APP_WIFIDOG)
+	start_wifidog();
+#endif
 #if defined(APP_VLMCSD)
 	start_vlmcsd();
 #endif
@@ -686,9 +689,6 @@ stop_services(int stopall)
 #if defined (APP_SSHD)
 		stop_sshd();
 #endif
-#if defined (APP_WIFIDOG)
-		stop_wifidog();
-#endif
 		stop_httpd();
 		stop_vpn_server();
 	}
@@ -706,6 +706,12 @@ stop_services(int stopall)
 #endif
 #if defined(APP_TTYD)
 	stop_ttyd();
+#endif
+#if defined (APP_NGROK)
+		stop_ngrok();
+#endif
+#if defined (APP_WIFIDOG)
+		stop_wifidog();
 #endif
 	stop_networkmap();
 	stop_lltd();
