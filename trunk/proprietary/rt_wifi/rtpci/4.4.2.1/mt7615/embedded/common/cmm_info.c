@@ -2858,7 +2858,11 @@ VOID RTMPCommSiteSurveyData(
 	{
 		INT idx = 0;
 		sprintf(Ssid, "0x");
+<<<<<<< HEAD
 		for (idx = 0; (idx < 14) && (idx < pBss->SsidLen); idx++)
+=======
+		for (idx = 0; (idx < 15) && (idx < pBss->SsidLen); idx++)
+>>>>>>> f27d90fe49687f8c472df4d6035d554075e86a07
 			sprintf(Ssid + 2 + (idx*2), "%02X", (UCHAR)pBss->Ssid[idx]);
 	}
 		sprintf(msg+strlen(msg),"%-33s", Ssid);

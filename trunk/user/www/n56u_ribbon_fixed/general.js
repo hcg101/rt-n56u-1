@@ -409,8 +409,12 @@ function validate_ssidchar(ch) {
         return true;
     if (ch >= 0x4e00 && ch <= 0x9fa5)
         return true;
+<<<<<<< HEAD
 
      return false;
+=======
+    return false;
+>>>>>>> f27d90fe49687f8c472df4d6035d554075e86a07
 }
 
 

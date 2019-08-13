@@ -24,6 +24,10 @@ OPENSSH_ENABLED=n
 DROPBEAR_ENABLED=n
 TTYD_ENABLED=n
 SAMBA_ENABLED=n
+ARIA2_ENABLED=n
+SOFTETHERVPN_ENABLE=n
+SHADOWSOCKS_ENABLE=n
+
 ifneq ($(CONFIG_FIRMWARE_INCLUDE_OPENSSH),y)
 ifeq ($(CONFIG_FIRMWARE_INCLUDE_DROPBEAR),y)
 DROPBEAR_ENABLED=y
@@ -74,16 +78,35 @@ SAMBA_ENABLED=y
 endif
 endif
 
+ifeq ($(CONFIG_FIRMWARE_INCLUDE_ARIA),y)
+ARIA2_ENABLED=y
+endif
+
+ifneq ($(filter y,$(CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_CMD) $(CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_CLIENT) $(CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_SERVER)),)
+SOFTETHERVPN_ENABLE=y
+endif
+
+ifneq ($(filter y,$(CONFIG_FIRMWARE_INCLUDE_SSSERVER) $(CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS)),)
+SHADOWSOCKS_ENABLE=y
+endif
+
 dir_y =
 dir_n =
 dir_  =
 
 dir_y						+= busybox
 dir_y						+= iptables
+dir_y						+= coremark
+ifneq ($(CONFIG_WITHOUT_KERNEL),y)
 dir_$(CONFIG_FIRMWARE_INCLUDE_IPSET)		+= ipset
+<<<<<<< HEAD
 dir_$(CONFIG_FIRMWARE_INCLUDE_WIFIDOG)		+= wifidog
 dir_$(CONFIG_FIRMWARE_INCLUDE_WOLFSSL)		+= wolfssl
 dir_$(CONFIG_FIRMWARE_INCLUDE_NGROK)		+= ngrok
+=======
+dir_y						+= accel-pptpd
+endif
+>>>>>>> f27d90fe49687f8c472df4d6035d554075e86a07
 dir_y						+= ebtables
 dir_y						+= iproute2
 dir_y						+= wireless_tools
@@ -95,6 +118,8 @@ dir_y						+= networkmap
 dir_y						+= httpd
 dir_y						+= www
 dir_y						+= rc
+dir_$(CONFIG_FIRMWARE_INCLUDE_NAPT66)		+= napt66
+dir_$(CONFIG_FIRMWARE_INCLUDE_SFE)		+= shortcut-fe
 dir_y						+= infosvr
 dir_y						+= inadyn
 dir_y						+= miniupnpd
@@ -107,19 +132,43 @@ dir_y						+= 802.1x
 dir_y						+= wpa_supplicant
 dir_y						+= pppd
 dir_y						+= pppoe
-dir_y						+= accel-pptpd
 dir_y						+= xl2tpd
 dir_$(CONFIG_FIRMWARE_INCLUDE_RPL2TP)		+= rp-l2tp
 dir_y						+= lldt
 dir_y						+= scripts
 dir_$(OPENSSH_ENABLED)				+= openssh
 dir_$(DROPBEAR_ENABLED)				+= dropbear
+dir_$(CONFIG_FIRMWARE_INCLUDE_HTOP)		+= htop
+dir_$(CONFIG_FIRMWARE_INCLUDE_NANO)		+= nano
 dir_$(CONFIG_FIRMWARE_INCLUDE_OPENVPN)		+= openvpn
 dir_$(CONFIG_FIRMWARE_INCLUDE_SSWAN)		+= strongswan
 dir_$(CONFIG_FIRMWARE_INCLUDE_XUPNPD)		+= xupnpd
 dir_$(CONFIG_FIRMWARE_INCLUDE_TCPDUMP)		+= tcpdump
+<<<<<<< HEAD
 dir_$(TTYD_ENABLED)				+= ttyd
+=======
+dir_$(CONFIG_FIRMWARE_INCLUDE_MTR)		+= mtr
+dir_$(CONFIG_FIRMWARE_INCLUDE_SOCAT)	+= socat
+dir_$(CONFIG_FIRMWARE_INCLUDE_SRELAY)	+= srelay
+ifeq ($(CONFIG_FIRMWARE_INCLUDE_SMBD36),y)
+dir_$(SAMBA_ENABLED)				+= samba36
+else
+>>>>>>> f27d90fe49687f8c472df4d6035d554075e86a07
 dir_$(SAMBA_ENABLED)				+= samba3
+endif
+dir_$(CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS)	+= chnroute
+dir_$(CONFIG_FIRMWARE_INCLUDE_TTYD)		+= ttyd
+dir_$(SOFTETHERVPN_ENABLE)			+= softethervpn
+dir_$(CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT)         += scutclient
+dir_$(CONFIG_FIRMWARE_INCLUDE_VLMCSD)			+= vlmcsd
+dir_$(CONFIG_FIRMWARE_INCLUDE_DNSFORWARDER)		+= dns-forwarder
+dir_$(SHADOWSOCKS_ENABLE)				+= shadowsocks
+dir_$(CONFIG_FIRMWARE_INCLUDE_LRZSZ)			+= lrzsz
+dir_$(CONFIG_FIRMWARE_INCLUDE_GDUT_DRCOM)		+= gdut-drcom
+dir_$(CONFIG_FIRMWARE_INCLUDE_DOGCOM)			+= dogcom
+dir_$(CONFIG_FIRMWARE_INCLUDE_IPERF3)			+= iperf3
+dir_$(CONFIG_FIRMWARE_INCLUDE_MINIEAP)			+= minieap
+dir_$(CONFIG_FIRMWARE_INCLUDE_NJIT_CLIENT)		+= njit-client
 
 ifdef CONFIG_BLK_DEV_SD
 dir_$(CONFIG_FIRMWARE_INCLUDE_HDPARM)		+= hdparm
@@ -132,12 +181,13 @@ dir_y						+= comgt-0.32
 dir_y						+= uqmi
 dir_$(CONFIG_FIRMWARE_INCLUDE_LPRD)		+= LPRng
 dir_$(CONFIG_FIRMWARE_INCLUDE_U2EC)		+= u2ec
+dir_$(CONFIG_FIRMWARE_INCLUDE_DUMP1090)	+= dump1090
 endif
 
 ifeq ($(STORAGE_ENABLED),y)
 dir_y						+= nfsd
-dir_y						+= util-linux
 dir_y						+= optware
+dir_y						+= util-linux
 dir_$(FS_EXT_ENABLED)				+= e2fsprogs
 dir_$(FS_FAT_ENABLED)				+= dosfstools
 dir_$(FS_NTFS_ENABLED)				+= ntfs-3g
@@ -146,14 +196,18 @@ dir_$(CONFIG_FIRMWARE_INCLUDE_FTPD)		+= vsftpd
 dir_$(CONFIG_FIRMWARE_INCLUDE_MINIDLNA)		+= minidlna
 dir_$(CONFIG_FIRMWARE_INCLUDE_FIREFLY)		+= firefly
 dir_$(CONFIG_FIRMWARE_INCLUDE_TRANSMISSION)	+= transmission
+<<<<<<< HEAD
 dir_$(CONFIG_FIRMWARE_INCLUDE_ARIA)		+= aria2
 
+=======
+dir_$(ARIA2_ENABLED)		+= aria2
+>>>>>>> f27d90fe49687f8c472df4d6035d554075e86a07
 endif
 
 ifdef CONFIG_MTD_UBI
 ifneq ($(STORAGE_ENABLED),y)
-dir_y						+= util-linux
 dir_y						+= optware
+dir_y						+= util-linux
 endif
 dir_y						+= mtd-utils
 endif

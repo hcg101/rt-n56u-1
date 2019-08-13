@@ -6,7 +6,7 @@ LDFLAGS += -Wl,--gc-sections
 THISDIR = $(shell pwd)
 
 all: config_test
-	$(MAKE) -C $(SRC_NAME)
+	$(MAKE) -j$(HOST_NCPU) -C $(SRC_NAME)
 
 config_test:
 	( if [ -f ./config_done ]; then \
@@ -27,7 +27,6 @@ configure:
 		--with-privsep-user=sshd \
 		--with-sandbox=no \
 		--without-pam \
-		--without-ssh1 \
 		--without-selinux \
 		--without-bsd-auth \
 		--without-kerberos5 \

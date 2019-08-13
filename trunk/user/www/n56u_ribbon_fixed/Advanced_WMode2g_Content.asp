@@ -209,7 +209,11 @@ function showLANIPList(){
 
 	if(wds_aplist != ""){
 		for(var i = 0; i < wds_aplist.length ; i++){
-			wds_aplist[i][0] = decodeURIComponent(wds_aplist[i][0]);
+			try {
+				wds_aplist[i][0] = decodeURIComponent(wds_aplist[i][0]);
+			} catch (e) {
+				console.log("malformed utf-8 ssid:"+wds_aplist[i][0]);
+			}
 			if(wds_aplist[i][0] && wds_aplist[i][0].length > 16)
 				show_name = wds_aplist[i][0].substring(0, 14) + "..";
 			else
@@ -367,7 +371,11 @@ function hideClients_Block(){
 
                                     <table width="100%" align="center" cellpadding="4" cellspacing="0" class="table">
                                         <tr id="row_wds_apc" style="display:none;">
+<<<<<<< HEAD
                                             <th width="50%"><a id="ctl_apc_1" class="help_tooltip" href="javascript:void(0);" onmouseover="openTooltip(this, 0, 1);"><#WLANConfig11b_Channel_itemonssid#></a></th>
+=======
+                                            <th width="50%"><a id="ctl_apc_1" class="help_tooltip" href="javascript:void(0);" onmouseover="openTooltip(this, 0, 1);"><#APSTA_SSID#></a></th>
+>>>>>>> f27d90fe49687f8c472df4d6035d554075e86a07
                                             <td>
                                                 <div id="WDSAPList" class="alert alert-info ddown-list"></div>
                                                 <div class="input-append" style="float: left;">

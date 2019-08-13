@@ -195,6 +195,8 @@ func_fill()
 	dir_wifidog="$dir_storage/wifidog"
 	dir_ngrok="$dir_storage/ngrok"
 	dir_wlan="$dir_storage/wlan"
+	dir_chnroute="$dir_storage/chinadns"
+	dir_gfwlist="$dir_storage/gfwlist"
 
 	script_start="$dir_storage/start_script.sh"
 	script_started="$dir_storage/started_script.sh"
@@ -214,6 +216,9 @@ func_fill()
 	user_sswan_conf="$dir_sswan/strongswan.conf"
 	user_sswan_ipsec_conf="$dir_sswan/ipsec.conf"
 	user_sswan_secrets="$dir_sswan/ipsec.secrets"
+	
+	chnroute_file="/etc_ro/chnroute.bz2"
+	gfwlist_conf_file="/etc_ro/gfwlist.bz2"
 
 	# create crond dir
 	[ ! -d "$dir_crond" ] && mkdir -p -m 730 "$dir_crond"
@@ -227,6 +232,20 @@ func_fill()
 
 	# create https dir
 	[ ! -d "$dir_httpssl" ] && mkdir -p -m 700 "$dir_httpssl"
+
+	# create chnroute.txt
+	if [ ! -d "$dir_chnroute" ] ; then
+		if [ -f "$chnroute_file" ]; then
+			mkdir -p "$dir_chnroute" && tar jxf "$chnroute_file" -C "$dir_chnroute"
+		fi
+	fi
+
+	# create gfwlist
+	if [ ! -d "$dir_gfwlist" ] ; then
+		if [ -f "$gfwlist_conf_file" ]; then	
+			mkdir -p "$dir_gfwlist" && tar jxf "$gfwlist_conf_file" -C "$dir_gfwlist"
+		fi
+	fi
 
 	# create start script
 	if [ ! -f "$script_start" ] ; then
@@ -248,6 +267,7 @@ func_fill()
 #modprobe ip_set_bitmap_ip
 #modprobe ip_set_list_set
 #modprobe xt_set
+<<<<<<< HEAD
 ### SD卡挂载#
 #/usr/bin/sdgz.sh
 #mkdir -p /media/AiDisk_a1/aria
@@ -276,11 +296,18 @@ func_fill()
 #/usr/bin/checkngrok.sh &
 #/usr/bin/phpstart.sh
 #wait
+=======
+
+#drop caches
+sync && echo 3 > /proc/sys/vm/drop_caches
+
+>>>>>>> f27d90fe49687f8c472df4d6035d554075e86a07
 EOF
 		chmod 755 "$script_started"
 	fi
 
 	# create post-iptables script
+
 	if [ ! -f "$script_postf" ] ; then
 		cat > "$script_postf" <<EOF
 #!/bin/sh
@@ -526,7 +553,26 @@ dhcp-option=252,"\n"
 ### Set the boot filename for netboot/PXE
 #dhcp-boot=pxelinux.0
 
+### Log for all queries
+#log-queries
+
 EOF
+	if [ -f /usr/bin/vlmcsd ]; then
+		cat >> "$user_dnsmasq_conf" <<EOF
+### vlmcsd related
+srv-host=_vlmcs._tcp,my.router,1688,0,100
+
+EOF
+	fi
+
+	if [ -d $dir_gfwlist ]; then
+		cat >> "$user_dnsmasq_conf" <<EOF
+### gfwlist related (resolve by port 5353)
+#min-cache-ttl=3600
+#conf-dir=/etc/storage/gfwlist
+
+EOF
+	fi
 		chmod 644 "$user_dnsmasq_conf"
 	fi
 

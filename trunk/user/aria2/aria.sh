@@ -71,6 +71,7 @@ rpc-allow-origin-all=true
 #rpc-private-key=/home/acgotaku/.config/aria2/example.key
 #允许外部访问，false的话只监听本地端口
 rpc-listen-all=true
+<<<<<<< HEAD
 #RPC端口, 仅当默认端口被占用时修改
 #rpc-listen-port=6800
 #最大同时下载数(任务数), 路由建议值: 3
@@ -106,10 +107,60 @@ dir=/media/AiDisk_a1/aria/downloads
 file-allocation=prealloc
 #不进行证书校验
 check-certificate=false
+=======
+rpc-allow-origin-all=true
+#rpc-secret=
+#rpc-user=$aria_user
+#rpc-passwd=$aria_pass
+
+### Common
+dir=$DIR_DL1
+max-download-limit=0
+max-overall-download-limit=0
+disable-ipv6=false
+
+### File
+file-allocation=trunc
+#file-allocation=falloc
+#file-allocation=none
+no-file-allocation-limit=10M
+allow-overwrite=false
+auto-file-renaming=true
+
+### Bittorent
+bt-enable-lpd=false
+#bt-lpd-interface=eth2.2
+bt-max-peers=50
+bt-max-open-files=100
+bt-request-peer-speed-limit=100K
+bt-stop-timeout=0
+enable-dht=true
+#enable-dht6=false
+enable-peer-exchange=true
+seed-ratio=1.5
+#seed-time=60
+max-upload-limit=0
+max-overall-upload-limit=0
+
+### FTP/HTTP
+ftp-pasv=true
+ftp-type=binary
+timeout=120
+connect-timeout=60
+split=8
+max-concurrent-downloads=3
+max-connection-per-server=8
+min-split-size=1M
+check-certificate=false
+
+### Log
+log=$DIR_CFG/aria2.log
+log-level=notice
+>>>>>>> f27d90fe49687f8c472df4d6035d554075e86a07
 
 EOF
 	fi
-
+:<<!
 	if [ ! -f "$FILE_WEB_CONF" ] ; then
 		cat > "$FILE_WEB_CONF" <<EOF
 angular
@@ -155,7 +206,7 @@ EOF
 		[ "$old_host" != "$lan_ipaddr" ] && sed -i "s/\(host:\).*/\1\ \'$lan_ipaddr\'\,/" $FILE_WEB_CONF
 		[ "$old_port" != "$aria_rport" ] && sed -i "s/\(port:\).*/\1\ \'$aria_rport\'\,/" $FILE_WEB_CONF
 	fi
-
+!
 	# aria2 needed home dir
 	export HOME="$DIR_CFG"
 

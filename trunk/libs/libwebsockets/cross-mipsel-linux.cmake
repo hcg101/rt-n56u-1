@@ -5,7 +5,11 @@
 #  cd build/
 #  cmake .. -DCMAKE_TOOLCHAIN_FILE=../cross-mipsel-linux.cmake
 
+<<<<<<< HEAD
 set(CROSS_PATH /opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x)
+=======
+set(CROSS_PATH $ENV{CONFIG_CROSS_COMPILER_ROOT})
+>>>>>>> f27d90fe49687f8c472df4d6035d554075e86a07
 set(ENV{PKG_CONFIG_PATH} "$ENV{PKG_CONFIG_PATH}:$ENV{STAGEDIR}/lib/pkgconfig")
 
 # Target operating system name.

@@ -3681,11 +3681,19 @@ BOOLEAN WpaMessageSanity (
 
 	if (MsgType < EAPOL_GROUP_MSG_1)
 	{
+<<<<<<< HEAD
 		MTWF_LOG(DBG_CAT_SEC, DBG_SUBCAT_ALL, DBG_LVL_ERROR, ("Replay Counter Different in pairwise msg %d of 4-way handshake!\n", MsgType));
 	}
 	else
 	{
 		MTWF_LOG(DBG_CAT_SEC, DBG_SUBCAT_ALL, DBG_LVL_ERROR, ("Replay Counter Different in group msg %d of 2-way handshake!\n", (MsgType - EAPOL_PAIR_MSG_4)));
+=======
+		MTWF_LOG(DBG_CAT_SEC, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("Replay Counter Different in pairwise msg %d of 4-way handshake!\n", MsgType));
+	}
+	else
+	{
+		MTWF_LOG(DBG_CAT_SEC, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("Replay Counter Different in group msg %d of 2-way handshake!\n", (MsgType - EAPOL_PAIR_MSG_4)));
+>>>>>>> f27d90fe49687f8c472df4d6035d554075e86a07
 	}
 
 	hex_dump("Receive replay counter ", pMsg->KeyDesc.ReplayCounter, LEN_KEY_DESC_REPLAY);
@@ -3730,11 +3738,19 @@ BOOLEAN WpaMessageSanity (
 
             if (MsgType < EAPOL_GROUP_MSG_1)
             {
+<<<<<<< HEAD
                 MTWF_LOG(DBG_CAT_SEC, DBG_SUBCAT_ALL, DBG_LVL_ERROR, ("MIC Different in pairwise msg %d of 4-way handshake!\n", MsgType));
             }
             else
             {
                 MTWF_LOG(DBG_CAT_SEC, DBG_SUBCAT_ALL, DBG_LVL_ERROR, ("MIC Different in group msg %d of 2-way handshake!\n", (MsgType - EAPOL_PAIR_MSG_4)));
+=======
+                MTWF_LOG(DBG_CAT_SEC, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("MIC Different in pairwise msg %d of 4-way handshake!\n", MsgType));
+            }
+            else
+            {
+                MTWF_LOG(DBG_CAT_SEC, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("MIC Different in group msg %d of 2-way handshake!\n", (MsgType - EAPOL_PAIR_MSG_4)));
+>>>>>>> f27d90fe49687f8c472df4d6035d554075e86a07
             }
 
             hex_dump("Received MIC", rcvd_mic, LEN_KEY_DESC_MIC);
@@ -4870,7 +4886,11 @@ VOID PeerPairMsg4Action(
         }
 #endif
 
+<<<<<<< HEAD
         MTWF_LOG(DBG_CAT_SEC, DBG_SUBCAT_ALL, DBG_LVL_OFF,
+=======
+        MTWF_LOG(DBG_CAT_SEC, DBG_SUBCAT_ALL, DBG_LVL_TRACE,
+>>>>>>> f27d90fe49687f8c472df4d6035d554075e86a07
                 ("AP SETKEYS DONE - AKMMap=%s, PairwiseCipher=%s, GroupCipher=%s, wcid=%d from %02X:%02X:%02X:%02X:%02X:%02X\n",
                             GetAuthModeStr(pSecConfig->AKMMap),
                             GetEncryModeStr(pSecConfig->PairwiseCipher),
@@ -4997,7 +5017,11 @@ VOID PeerGroupMsg2Action(
         RTMPSendWirelessEvent(pAd, IW_SET_KEY_DONE_WPA1_EVENT_FLAG, pEntry->Addr, pEntry->wdev->wdev_idx, 0);
     }
 
+<<<<<<< HEAD
     MTWF_LOG(DBG_CAT_SEC, DBG_SUBCAT_ALL, DBG_LVL_OFF, ("AP SETKEYS DONE - AKMMap=%s, PairwiseCipher=%s, GroupCipher=%s from %02X:%02X:%02X:%02X:%02X:%02X\n",
+=======
+    MTWF_LOG(DBG_CAT_SEC, DBG_SUBCAT_ALL, DBG_LVL_TRACE, ("AP SETKEYS DONE - AKMMap=%s, PairwiseCipher=%s, GroupCipher=%s from %02X:%02X:%02X:%02X:%02X:%02X\n",
+>>>>>>> f27d90fe49687f8c472df4d6035d554075e86a07
 		GetAuthModeStr(pSecConfig->AKMMap),
 		GetEncryModeStr(pSecConfig->PairwiseCipher),
 		GetEncryModeStr(pSecConfig->GroupCipher),

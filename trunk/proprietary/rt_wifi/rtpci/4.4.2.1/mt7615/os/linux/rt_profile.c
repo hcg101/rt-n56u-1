@@ -110,8 +110,13 @@ struct dev_type_name_map{
 
 #else
 #define FIRST_EEPROM_FILE_PATH	"/etc_ro/Wireless/RT2860/"
+<<<<<<< HEAD
 #define FIRST_AP_PROFILE_PATH		"/etc/Wireless/RT2860/RT2860.dat"
 #define FIRST_STA_PROFILE_PATH      "/etc/Wireless/RT2860/RT2860.dat"
+=======
+#define FIRST_AP_PROFILE_PATH		"/etc/Wireless/RT2860/RT2860AP.dat"
+#define FIRST_STA_PROFILE_PATH      "/etc/Wireless/RT2860/RT2860AP.dat"
+>>>>>>> f27d90fe49687f8c472df4d6035d554075e86a07
 #define FIRST_CHIP_ID	xdef_to_str(MT_FIRST_CARD)
 
 #define SECOND_EEPROM_FILE_PATH	"/etc_ro/Wireless/iNIC/"

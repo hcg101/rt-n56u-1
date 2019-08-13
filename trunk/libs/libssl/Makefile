@@ -3,7 +3,7 @@ SRC_NAME=openssl-1.0.2
 # openssl use CROSS_COMPILE prefix
 CC=gcc $(CPUFLAGS)
 
-COPTS=-ffunction-sections -fdata-sections -Wl,--gc-sections -I$(DESTDIR)/include
+COPTS=$(CFLAGS) -ffunction-sections -fdata-sections -Wl,--gc-sections -I$(DESTDIR)/include
 COPTS+=$(if $(CONFIG_IPV6),-DOPENSSL_USE_IPV6=1,)
 COPTS+=-DOPENSSL_SMALL_FOOTPRINT
 
@@ -20,7 +20,6 @@ ifdef CONFIG_CRYPTO_DEV_LINUX
 COPTS+=-DHAVE_CRYPTODEV
 else
 OPENSSL_APPS += no-speed
-OPENSSL_CIPHERS += no-engine
 endif
 
 ifneq ($(CONFIG_FIRMWARE_INCLUDE_SSWAN),y)
@@ -32,7 +31,8 @@ OPENSSL_CIPHERS += no-ec
 endif
 
 all: config_test
-	$(MAKE) -C $(SRC_NAME)
+	$(MAKE) -C $(SRC_NAME) depend
+	$(MAKE) -j$(HOST_NCPU) -C $(SRC_NAME)
 
 config_test:
 	( if [ -f ./config_done ]; then \
@@ -56,13 +56,18 @@ configure:
 	)
 
 clean:
-	$(MAKE) -C $(SRC_NAME) clean; \
+	$(MAKE) -C $(SRC_NAME) distclean
 	rm -f config_done
 
 install:
 	$(MAKE) -C $(SRC_NAME) install DESTDIR="$(STAGEDIR)"
+	# remove unneeded
 	rm -f $(DESTDIR)/lib/libssl.a
 	rm -f $(DESTDIR)/lib/libcrypto.a
+	# fix pkgconfig
+	sed -i 's,^prefix=.*,prefix=$(STAGEDIR),g' $(STAGEDIR)/lib/pkgconfig/libcrypto.pc
+	sed -i 's,^prefix=.*,prefix=$(STAGEDIR),g' $(STAGEDIR)/lib/pkgconfig/libssl.pc
+	sed -i 's,^prefix=.*,prefix=$(STAGEDIR),g' $(STAGEDIR)/lib/pkgconfig/openssl.pc
 
 romfs:
 	cp -fP $(DESTDIR)/lib/libssl.so* $(ROMFSDIR)/lib
