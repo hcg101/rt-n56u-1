@@ -281,13 +281,8 @@ struct nvram_pair router_defaults[] = {
 	{ "rt_TxPower", "100" },
 	{ "rt_TxBurst", "1" },
 	{ "rt_PktAggregate", "1" },
-<<<<<<< HEAD
 	{ "rt_APSDCapable", "1" },
 	{ "rt_auth_mode", "open" },
-=======
-	{ "rt_APSDCapable", "0" },
-	{ "rt_auth_mode", "psk" },
->>>>>>> f27d90fe49687f8c472df4d6035d554075e86a07
 	{ "rt_crypto", "aes" },
 	{ "rt_wpa_psk", DEF_WLAN_2G_PSK },
 	{ "rt_wpa_gtk_rekey", "3600" },

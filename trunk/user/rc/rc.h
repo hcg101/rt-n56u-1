@@ -525,7 +525,7 @@ int is_ngrok_run(void);
 void stop_ngrok(void);
 void run_ngrok(void);
 void restart_ngrok(void);
-=======
+
 #if defined(APP_SCUT)
 int is_scutclient_run(void);
 void stop_scutclient(void);
@@ -559,7 +559,7 @@ void start_napt66(void);
 void stop_dnsforwarder(void);
 void start_dnsforwarder(void);
 void restart_dnsforwarder(void);
->>>>>>> f27d90fe49687f8c472df4d6035d554075e86a07
+
 #endif
 
 /* services_ex.c */

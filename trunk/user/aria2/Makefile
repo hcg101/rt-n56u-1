@@ -78,12 +78,11 @@ clean:
 romfs:
 ifeq ($(CONFIG_FIRMWARE_INCLUDE_ARIA_WEB_CONTROL),y)
 	cp -rf $(THISDIR)/ariaweb $(INSTALLDIR)/www
-<<<<<<< HEAD
+
 	cp -rf $(THISDIR)/yaaw $(INSTALLDIR)/www
 	cd $(INSTALLDIR)/www/ariaweb && ln -sf /mnt/aria/config/configuration.js configuration.js
 	cd $(INSTALLDIR)/www/yaaw && ln -sf /mnt/aria/config/configuration.js configuration.js
-=======
->>>>>>> f27d90fe49687f8c472df4d6035d554075e86a07
+
 endif
 ifeq ($(CONFIG_FIRMWARE_INCLUDE_ARIA2_NEW_PREBUILD_BIN),y)
 ifeq ($(CONFIG_PRODUCT),MT7621)

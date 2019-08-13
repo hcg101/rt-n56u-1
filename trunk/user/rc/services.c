@@ -233,7 +233,7 @@ restart_sshd(void)
 }
 #endif
 
-<<<<<<< HEAD
+
 #if defined(APP_WIFIDOG)
 int
 is_wifidog_run(void)
@@ -313,7 +313,7 @@ restart_ngrok(void)
 	start_ngrok();
 
 	is_run_after = is_ngrok_run();
-=======
+
 #if defined(APP_SCUT)
 int is_scutclient_run(void)
 {
@@ -447,7 +447,7 @@ void start_napt66(void){
 		else
 			logmessage("napt66","Invalid wan6 ifname!");
 	}
->>>>>>> f27d90fe49687f8c472df4d6035d554075e86a07
+
 }
 #endif
 

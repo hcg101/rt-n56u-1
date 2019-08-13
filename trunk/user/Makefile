@@ -99,14 +99,14 @@ dir_y						+= iptables
 dir_y						+= coremark
 ifneq ($(CONFIG_WITHOUT_KERNEL),y)
 dir_$(CONFIG_FIRMWARE_INCLUDE_IPSET)		+= ipset
-<<<<<<< HEAD
+
 dir_$(CONFIG_FIRMWARE_INCLUDE_WIFIDOG)		+= wifidog
 dir_$(CONFIG_FIRMWARE_INCLUDE_WOLFSSL)		+= wolfssl
 dir_$(CONFIG_FIRMWARE_INCLUDE_NGROK)		+= ngrok
-=======
+
 dir_y						+= accel-pptpd
 endif
->>>>>>> f27d90fe49687f8c472df4d6035d554075e86a07
+
 dir_y						+= ebtables
 dir_y						+= iproute2
 dir_y						+= wireless_tools
@@ -144,16 +144,16 @@ dir_$(CONFIG_FIRMWARE_INCLUDE_OPENVPN)		+= openvpn
 dir_$(CONFIG_FIRMWARE_INCLUDE_SSWAN)		+= strongswan
 dir_$(CONFIG_FIRMWARE_INCLUDE_XUPNPD)		+= xupnpd
 dir_$(CONFIG_FIRMWARE_INCLUDE_TCPDUMP)		+= tcpdump
-<<<<<<< HEAD
+
 dir_$(TTYD_ENABLED)				+= ttyd
-=======
+
 dir_$(CONFIG_FIRMWARE_INCLUDE_MTR)		+= mtr
 dir_$(CONFIG_FIRMWARE_INCLUDE_SOCAT)	+= socat
 dir_$(CONFIG_FIRMWARE_INCLUDE_SRELAY)	+= srelay
 ifeq ($(CONFIG_FIRMWARE_INCLUDE_SMBD36),y)
 dir_$(SAMBA_ENABLED)				+= samba36
 else
->>>>>>> f27d90fe49687f8c472df4d6035d554075e86a07
+
 dir_$(SAMBA_ENABLED)				+= samba3
 endif
 dir_$(CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS)	+= chnroute
@@ -196,12 +196,10 @@ dir_$(CONFIG_FIRMWARE_INCLUDE_FTPD)		+= vsftpd
 dir_$(CONFIG_FIRMWARE_INCLUDE_MINIDLNA)		+= minidlna
 dir_$(CONFIG_FIRMWARE_INCLUDE_FIREFLY)		+= firefly
 dir_$(CONFIG_FIRMWARE_INCLUDE_TRANSMISSION)	+= transmission
-<<<<<<< HEAD
+
 dir_$(CONFIG_FIRMWARE_INCLUDE_ARIA)		+= aria2
 
-=======
-dir_$(ARIA2_ENABLED)		+= aria2
->>>>>>> f27d90fe49687f8c472df4d6035d554075e86a07
+
 endif
 
 ifdef CONFIG_MTD_UBI

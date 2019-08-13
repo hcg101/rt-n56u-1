@@ -2196,7 +2196,7 @@ ej_firmware_caps_hook(int eid, webs_t wp, int argc, char **argv)
 #else
 	int found_app_sshd = 0;
 #endif
-<<<<<<< HEAD
+
 #if defined(APP_WIFIDOG)
 	int found_app_wifidog = 1;
 #else
@@ -2206,7 +2206,7 @@ ej_firmware_caps_hook(int eid, webs_t wp, int argc, char **argv)
 	int found_app_ngrok = 1;
 #else
 	int found_app_ngrok = 0;
-=======
+
 #if defined(APP_SCUT)
 	int found_app_scutclient = 1;
 #else
@@ -2236,7 +2236,7 @@ ej_firmware_caps_hook(int eid, webs_t wp, int argc, char **argv)
 	int found_app_dnsforwarder = 1;
 #else
 	int found_app_dnsforwarder = 0;
->>>>>>> f27d90fe49687f8c472df4d6035d554075e86a07
+
 #endif
 #if defined(APP_XUPNPD)
 	int found_app_xupnpd = 1;
@@ -2396,17 +2396,14 @@ ej_firmware_caps_hook(int eid, webs_t wp, int argc, char **argv)
 		"function found_srv_u2ec() { return %d;}\n"
 		"function found_srv_lprd() { return %d;}\n"
 		"function found_app_sshd() { return %d;}\n"
-<<<<<<< HEAD
 		"function found_app_wifidog() { return %d;}\n"
 		"function found_app_ngrok() { return %d;}\n"
-=======
 		"function found_app_scutclient() { return %d;}\n"
 		"function found_app_ttyd() { return %d;}\n"
 		"function found_app_vlmcsd() { return %d;}\n"
 		"function found_app_napt66() { return %d;}\n"
 		"function found_app_dnsforwarder() { return %d;}\n"
 		"function found_app_shadowsocks() { return %d;}\n"
->>>>>>> f27d90fe49687f8c472df4d6035d554075e86a07
 		"function found_app_xupnpd() { return %d;}\n",
 		found_utl_hdparm,
 		found_app_ovpn,
@@ -2422,17 +2419,14 @@ ej_firmware_caps_hook(int eid, webs_t wp, int argc, char **argv)
 		found_srv_u2ec,
 		found_srv_lprd,
 		found_app_sshd,
-<<<<<<< HEAD
 		found_app_wifidog,
 		found_app_ngrok,
-=======
 		found_app_scutclient,
 		found_app_ttyd,
 		found_app_vlmcsd,
 		found_app_napt66,
 		found_app_dnsforwarder,
 		found_app_shadowsocks,
->>>>>>> f27d90fe49687f8c472df4d6035d554075e86a07
 		found_app_xupnpd
 	);
 

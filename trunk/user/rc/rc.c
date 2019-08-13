@@ -1236,7 +1236,7 @@ handle_notifications(void)
 			restart_sshd();
 		}
 #endif
-<<<<<<< HEAD
+
 
 #if defined(APP_WIFIDOG)
 		else if (strcmp(entry->d_name, RCN_RESTART_WIFIDOG) == 0)
@@ -1252,7 +1252,7 @@ handle_notifications(void)
 		}
 #endif
 
-=======
+
 #if defined(APP_SCUT)
 		else if (strcmp(entry->d_name, RCN_RESTART_SCUT) == 0)
 		{
@@ -1299,7 +1299,7 @@ handle_notifications(void)
 			restart_dnsforwarder();
 		}
 #endif
->>>>>>> f27d90fe49687f8c472df4d6035d554075e86a07
+
 #if defined(APP_SMBD) || defined(APP_NMBD)
 		else if (strcmp(entry->d_name, RCN_RESTART_NMBD) == 0)
 		{

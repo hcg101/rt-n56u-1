@@ -267,7 +267,7 @@ func_fill()
 #modprobe ip_set_bitmap_ip
 #modprobe ip_set_list_set
 #modprobe xt_set
-<<<<<<< HEAD
+
 ### SD卡挂载#
 #/usr/bin/sdgz.sh
 #mkdir -p /media/AiDisk_a1/aria
@@ -296,12 +296,9 @@ func_fill()
 #/usr/bin/checkngrok.sh &
 #/usr/bin/phpstart.sh
 #wait
-=======
 
-#drop caches
-sync && echo 3 > /proc/sys/vm/drop_caches
+#sync && echo 3 > /proc/sys/vm/drop_caches
 
->>>>>>> f27d90fe49687f8c472df4d6035d554075e86a07
 EOF
 		chmod 755 "$script_started"
 	fi

@@ -73,10 +73,7 @@ ifeq ($(CONFIG_RT_SECOND_CARD),7615)
 	$(ROMFSINST) /etc_ro/Wireless/mt7615e.eeprom.bin
 endif
 endif
-<<<<<<< HEAD
 
-=======
->>>>>>> f27d90fe49687f8c472df4d6035d554075e86a07
 romfs.post::
 	[ -d $(IMAGEDIR) ] || mkdir -p $(IMAGEDIR)
 	sudo /sbin/ldconfig -r $(ROMFSDIR) -C /etc_ro/ld.so.cache

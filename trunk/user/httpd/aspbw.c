@@ -110,15 +110,7 @@ size_t strlcpy(char *d, const char *s, size_t bufsize)
  * @return int
  */
 static int hex_char_to_int(const uint8_t *hex)
-<<<<<<< HEAD
-{
-        int val;
-        if(*hex >= '0' && *hex <='9') {
-                val = (*hex - '0') * 16;
-        } else {
-                val = (*hex - 'A' + 10) * 16;
-        }
-=======
+
 {
 	int val;
 	if(*hex >= '0' && *hex <='9') {
@@ -281,7 +273,7 @@ void char_to_ascii(char *output, uint8_t *input)
 			}
 		}
 	}
->>>>>>> f27d90fe49687f8c472df4d6035d554075e86a07
+
 
         if(*(hex+1) >= '0' && *(hex+1) <='9') {
                 val += (*(hex+1) - '0');
